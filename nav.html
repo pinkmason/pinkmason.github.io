@@ -1,0 +1,60 @@
+<!doctype html>
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="nav-styles.css">
+   <title>pinkmason's nav</title>
+
+<script>
+function searchBaidu() {
+    // 获取搜索框中的值
+    var searchTerm = document.getElementById('searchInput').value;
+
+    // 构建百度搜索的URL（注意：这里使用的是百度搜索的公共URL）
+    var baiduSearchUrl = 'https://www.baidu.com/s?wd=' + encodeURIComponent(searchTerm);
+
+    // 重定向到百度搜索页面
+    window.open(baiduSearchUrl,'_blank');
+}
+function handleKeyPress(event) {
+            if (event.key === 'Enter') {
+                searchBaidu();
+            }
+}
+</script>
+</head>
+<body>
+
+<div class="navbar">
+<div class="nav-item"><a href="https://pinkmason.github.io/" target="_blank">个人主页</a></div>
+<div class="nav-item"><a href="..\..\" target="_blank">个人资料</a></div>
+</div>
+
+<div class="search-container">
+        <form onsubmit="event.preventDefault()"><!-- 阻止表单默认的提交行为,; searchBaidu();这里面也可以加 -->
+            <input type="text" id="searchInput" class="search-input" placeholder="请输入搜索关键词" onkeypress="handleKeyPress(event)">
+            <button type="button" class="search-button" onclick="searchBaidu()">搜索</button>
+        </form>
+</div>
+
+<ul id="mywebsite">
+<a href="https://docs.qq.com/desktop/" target="_blank">腾讯文档</a>
+<a href="http://www.github.com/" target="_blank">Github</a>
+<a href="https://fanyi.baidu.com/" target="_blank">百度翻译</a>
+<a href="https://pan.baidu.com/" target="_blank">百度网盘</a>
+<a href="https://www.bilibili.com/" target="_blank">哔哩哔哩</a>
+<a href="https://weibo.com/" target="_blank">新浪微博</a>
+<a href="https://tieba.baidu.com/home/main?id=tb.1.7cd67a64.qIZHEp8WtLF0JjYORye7mg&fr=userbar" target="_blank">百度贴吧</a>
+<a href="https://mp.weixin.qq.com/" target="_blank">微信公众</a>
+<a href="https://mail.qq.com/" target="_blank">QQ邮箱</a>
+<a href="https://outlook.live.com/mail/0/" target="_blank">Outlook</a>
+<a href="https://www.alipay.com/" target="_blank">支付宝</a>
+<a href="https://tv.cctv.com/live/" target="_blank">CCTV</a>
+<a href="https://www.zhihu.com/follow" target="_blank">知乎</a>
+<a href="https://www.douban.com/" target="_blank">豆瓣</a>
+<a href="https://www.hupu.com/" target="_blank">虎扑</a>
+<a href="https://www.taobao.com/" target="_blank">淘宝</a>
+<a href="https://www.jd.com/" target="_blank">京东</a>
+</ul>
+</body>
