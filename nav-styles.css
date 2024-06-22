@@ -1,6 +1,6 @@
 body {
-    background-image: url('media/bg.jpg');
-    background-color: #7F7F7F;
+    /* background-image: url('media/bg.jpg');*/
+    background-color: white;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -11,7 +11,7 @@ body {
     justify-content: flex-start; /* 项目之间的空间平均分布 */
     padding: 10px 0; /* 上下内边距 */
     //background-color: #4668dd; /* 背景色 */
-    color: white; /* 文字颜色 */
+    color: black; /* 文字颜色 */
 }
 .nav-item {
     margin: 0 10px; /* 项目之间的外边距 */
@@ -27,7 +27,7 @@ body {
     background-color: #4668dd; /* 鼠标悬停时的背景色 */
 }
 
-/* 我的网站 */
+/* 常用网站 */
 #mywebsite{
 	display: flex;
 	padding-left: 0;
@@ -42,7 +42,7 @@ body {
     line-height: 60px;
     display: inline-block; /* 使其表现得像块级元素，但可以在行内显示 */
     transition: all 0.3s ease; /* 添加过渡效果 */
-    color:white;
+    color:black;
 }
 #mywebsite a:hover {
    background-color: #4668dd; /* 鼠标悬停时的背景色 */
