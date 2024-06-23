@@ -10,8 +10,7 @@ body {
     display: flex; /* 使用flex布局来实现水平排列 */
     justify-content: flex-start; /* 项目之间的空间平均分布 */
     padding: 10px 0; /* 上下内边距 */
-    //background-color: #4668dd; /* 背景色 */
-    color: black; /* 文字颜色 */
+    /* background-color: #4668dd; /* 背景色 */
 }
 .nav-item {
     margin: 0 0px; /* 项目之间的外边距 */
@@ -22,30 +21,10 @@ body {
     padding: 5px 10px; /* 内边距，使链接区域更大，更容易点击 */
     display: inline-block; /* 使其表现得像块级元素，但可以在行内显示 */
     transition: all 0.3s ease; /* 添加过渡效果 */
+    color: black; /* 文字颜色 */
 }
 .nav-item a:hover {
     background-color: #8188d8; /* 鼠标悬停时的背景色 */
-}
-
-/* 常用网站 */
-#mywebsite{
-	display: flex;
-	padding-left: 0;/* 消除左侧空白 */
-	flex-flow: row wrap;
-	justify-content: center;
-}
-#mywebsite a{
-    text-decoration: none; /* 移除下划线 */
-    width: 22%;
-    height: 60px;
-    text-align: center;
-    line-height: 60px;
-    display: inline-block; /* 使其表现得像块级元素，但可以在行内显示 */
-    transition: all 0.3s ease; /* 添加过渡效果 */
-    color:black;
-}
-#mywebsite a:hover {
-   background-color: #8188d8; /* 鼠标悬停时的背景色 */
 }
 
 /* 搜索框 */
@@ -72,4 +51,28 @@ body {
     border-radius: 0 5px 5px 0;
     padding: 0 15px;
     cursor: pointer;
+}
+
+/* 网站 */
+.website.active{
+	display: flex;
+	padding-left: 0;/* 消除左侧空白 */
+	flex-flow: row wrap;
+	justify-content: center;
+}
+.website{
+	display: none;
+}
+.website a{
+    text-decoration: none; /* 移除下划线 */
+    width: 22%;
+    height: 60px;
+    text-align: center;
+    line-height: 60px;
+    display: inline-block; /* 使其表现得像块级元素，但可以在行内显示 */
+    transition: all 0.3s ease; /* 添加过渡效果 */
+    color:black;
+}
+.website a:hover {
+   background-color: #8188d8; /* 鼠标悬停时的背景色 */
 }
