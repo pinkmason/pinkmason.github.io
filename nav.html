@@ -28,14 +28,14 @@ function handleKeyPress(event) {
 
 <div class="navbar">
 <div class="nav-item"><a href="https://pinkmason.github.io/" target="_blank">主页</a></div>
-
+<div class="nav-item"><a href="study.html" target="_blank">学习</a></div>
 <div style="display:none;" class="nav-item"><a href="..\..\" target="_blank">资料</a></div>
 </div>
 
 <div class="search-container">
         <form onsubmit="event.preventDefault()"><!-- 阻止表单默认的提交行为,; searchBaidu();这里面也可以加 -->
             <input type="text" id="searchInput" class="search-input" placeholder="请输入搜索关键词" onkeypress="handleKeyPress(event)">
-            <button type="button" class="search-button" onclick="searchBaidu()">搜索</button>
+            <button style="display:none;" type="button" class="search-button" onclick="searchBaidu()">搜索</button>
         </form>
 </div>
 
@@ -48,9 +48,12 @@ function handleKeyPress(event) {
 <a href="https://weibo.com/" target="_blank">新浪微博</a>
 <a href="https://tieba.baidu.com/home/main?id=tb.1.7cd67a64.qIZHEp8WtLF0JjYORye7mg&fr=userbar" target="_blank">百度贴吧</a>
 <a href="https://mp.weixin.qq.com/" target="_blank">微信公众</a>
+<a href="https://chat.baidu.com/" target="_blank">百度AI</a>
 <a href="https://mail.qq.com/" target="_blank">QQ邮箱</a>
 <a href="https://outlook.live.com/mail/0/" target="_blank">Outlook</a>
 <a href="https://www.alipay.com/" target="_blank">支付宝</a>
+<a href="https://www.thepaper.cn/morningEveningPaper" target="_blank">早晚报</a>
+<a href="https://sspai.com/tag/%E6%B4%BE%E6%97%A9%E6%8A%A5" target="_blank">派早报</a>
 <a href="https://tv.cctv.com/live/" target="_blank">CCTV</a>
 <a href="https://www.zhihu.com/follow" target="_blank">知乎</a>
 <a href="https://www.douban.com/" target="_blank">豆瓣</a>
