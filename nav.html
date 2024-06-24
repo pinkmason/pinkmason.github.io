@@ -28,6 +28,7 @@ function handleKeyPress(event) {
 <div class="nav-item"><a href="index.html" target="_blank">返回主页</a></div>
 <div class="nav-item"><a>常用</a></div>
 <div class="nav-item"><a>娱乐</a></div>
+<div class="nav-item"><a>工具</a></div>
 <!-- 文件浏览功能 -->
 <div style="display:none;" class="nav-item"><a href="..\..\" target="_blank">资料</a></div>
 </div>
@@ -67,6 +68,14 @@ function handleKeyPress(event) {
     <a href="https://js13kgames.com/" target="_blank">js13k</a>
     <a href="https://www.tennis.com/" target="_blank">Tennis</a>
 </ul>
+<!-- 工具网站 -->
+<ul class="website">
+  <a href="https://www.filetypeadvisor.com/zh-cn/" target="_blank">文件格式</a>
+  <a href="https://scandomain.cyayaa.com/#/" target="_blank">域名查询</a>
+  <a href="http://duososo.com/index_shitu.php" target="_blank">以图搜图</a>
+  <a href="https://kydsj.vip/doku.php?id=start" target="_blank">开源大世界</a>
+  <a href="https://www.waytoagi.com/" target="_blank">WaytoAGI</a>
+</ul>
 <!-- 导航栏脚本-待优化 -->
 <script>
     // 常用-点击事件
@@ -89,5 +98,15 @@ function handleKeyPress(event) {
       });
       webs[1].classList.add('active'); // 添加active类，显示内容
     });   
+    // 工具-点击事件
+    document.getElementsByClassName('nav-item')[3].addEventListener('click', function() {
+      // 获取所有的内容容器
+      var webs = document.querySelectorAll('.website');
+      // 遍历所有的内容容器，并隐藏它们
+      webs.forEach(function(web) {
+        web.classList.remove('active'); // 移除active类，隐藏内容
+      });
+      webs[2].classList.add('active'); // 添加active类，显示内容
+    }); 
   </script>
 </body>
