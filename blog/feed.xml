@@ -1,0 +1,18 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+<channel>
+    <title>pinkmason's blog</title>
+    <link>https://pinkmason.github.io/blog.html</link>
+    <description>Recent</description>
+    <!-- <generator>待添加</generator> -->
+    <language>zh-CN</language>
+    <lastBuildDate>Tue, 24 Jun 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://pinkmason.github.io/blog/feed.xml" rel="self" type="application/rss+xml"/>
+<!--     <item>
+        <title></title>
+        <link></link>
+        <pubDate></pubDate>
+        <guid></guid>
+        <description></description>
+    </item> -->
+</channel>
+</rss>
