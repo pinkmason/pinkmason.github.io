@@ -5,22 +5,22 @@
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <link rel="stylesheet" href="css/nav-styles.css">
    <title>pinkmason的导航</title>
-
-<script>
-function searchBaidu() {
-    // 获取搜索框中的值
-    var searchTerm = document.getElementById('searchInput').value;
-    // 构建百度搜索的URL（注意：这里使用的是百度搜索的公共URL）
-    var baiduSearchUrl = 'https://www.baidu.com/s?wd=' + encodeURIComponent(searchTerm);
-    // 重定向到百度搜索页面
-    window.open(baiduSearchUrl,'_blank');
-}
-function handleKeyPress(event) {
-            if (event.key === 'Enter') {
-                searchBaidu();
-            }
-}
-</script>
+  <!-- 搜索脚本 -->
+  <script>
+  function searchBaidu() {
+      // 获取搜索框中的值
+      var searchTerm = document.getElementById('searchInput').value;
+      // 构建百度搜索的URL（注意：这里使用的是百度搜索的公共URL）
+      var baiduSearchUrl = 'https://www.baidu.com/s?wd=' + encodeURIComponent(searchTerm);
+      // 重定向到百度搜索页面
+      window.open(baiduSearchUrl,'_blank');
+  }
+  function handleKeyPress(event) {
+              if (event.key === 'Enter') {
+                  searchBaidu();
+              }
+  }
+  </script>
 </head>
 <body>
 <!-- 导航条 -->
