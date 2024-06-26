@@ -1,45 +1,64 @@
 body {
-    /* background-image: url('media/bg.jpg');*//* 设置壁纸，文字需要改颜色 */
+    /* background-image: url('media/bg.jpg');*/
+    /* 设置壁纸，文字需要改颜色 */
     background-color: white;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
 }
+
 /* 导航栏 */
 .navbar {
-    display: flex; /* 使用flex布局来实现水平排列 */
-    justify-content: flex-start; /* 项目之间的空间平均分布 */
-    padding: 10px 0px; /* 上下内边距 */
+    display: flex;
+    /* 使用flex布局来实现水平排列 */
+    justify-content: flex-start;
+    /* 项目之间的空间平均分布 */
+    padding: 10px 0px;
+    /* 上下内边距 */
     /* background-color: #4668dd; /* 背景色 */
 }
+
 .nav-item {
-    margin: 0px 0px; /* 项目之间的外边距 */
+    margin: 0px 0px;
+    /* 项目之间的外边距 */
 }
+
 .nav-item a {
-    text-decoration: none; /* 移除下划线 */
-    /* color: inherit; /* 继承父元素的文字颜色 */ 
-    padding: 5px 10px; /* 内边距，使链接区域更大，更容易点击 */
-    display: inline-block; /* 使其表现得像块级元素，但可以在行内显示 */
-    transition: all 0.3s ease; /* 添加过渡效果 */
-    color: black; /* 文字颜色 */
+    text-decoration: none;
+    /* 移除下划线 */
+    /* color: inherit; /* 继承父元素的文字颜色 */
+    padding: 5px 10px;
+    /* 内边距，使链接区域更大，更容易点击 */
+    display: inline-block;
+    /* 使其表现得像块级元素，但可以在行内显示 */
+    transition: all 0.3s ease;
+    /* 添加过渡效果 */
+    color: black;
+    /* 文字颜色 */
 }
+
 .nav-item a:hover {
-    background-color: #8188d8; /* 鼠标悬停时的背景色 */
+    background-color: #8188d8;
+    /* 鼠标悬停时的背景色 */
 }
 
 /* 搜索框 */
 .search-container {
     width: 60%;
-    margin: 5% auto; /* 水平居中 */
+    margin: 5% auto;
+    /* 水平居中 */
     position: relative;
 }
+
 .search-input {
     width: 100%;
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
-    box-sizing: border-box; /* 确保padding不会增加元素的总宽度 */
+    box-sizing: border-box;
+    /* 确保padding不会增加元素的总宽度 */
 }
+
 .search-button {
     position: absolute;
     right: 0;
@@ -54,25 +73,33 @@ body {
 }
 
 /* 网站 */
-.website.active{
-	display: flex;
-	padding-left: 0;/* 消除左侧空白 */
-	flex-flow: row wrap;
-	justify-content: center;
+.website.active {
+    display: flex;
+    padding-left: 0;
+    /* 消除左侧空白 */
+    flex-flow: row wrap;
+    justify-content: center;
 }
-.website{
-	display: none;
+
+.website {
+    display: none;
 }
-.website a{
-    text-decoration: none; /* 移除下划线 */
+
+.website a {
+    text-decoration: none;
+    /* 移除下划线 */
     width: 22%;
     height: 60px;
     text-align: center;
     line-height: 60px;
-    display: inline-block; /* 使其表现得像块级元素，但可以在行内显示 */
-    transition: all 0.3s ease; /* 添加过渡效果 */
-    color:black;
+    display: inline-block;
+    /* 使其表现得像块级元素，但可以在行内显示 */
+    transition: all 0.3s ease;
+    /* 添加过渡效果 */
+    color: black;
 }
+
 .website a:hover {
-   background-color: #8188d8; /* 鼠标悬停时的背景色 */
+    background-color: #8188d8;
+    /* 鼠标悬停时的背景色 */
 }
