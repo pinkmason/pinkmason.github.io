@@ -2,7 +2,7 @@
 .navbar {
     display: flex; /* 使用flex布局来实现水平排列 */
     justify-content: flex-start; /* 项目之间的空间平均分布 */
-    padding: 10px 0; /* 上下内边距 */
+    padding: 10px 0px; /* 上下内边距 */
     /* background-color: #4668dd; /* 背景色 */
 }
 .nav-item {
@@ -10,7 +10,7 @@
 }
 .nav-item a {
     text-decoration: none; /* 移除下划线 */
-    color: inherit; /* 继承父元素的文字颜色 */
+    /* color: inherit; /* 继承父元素的文字颜色 */ 
     padding: 5px 10px; /* 内边距，使链接区域更大，更容易点击 */
     display: inline-block; /* 使其表现得像块级元素，但可以在行内显示 */
     transition: all 0.3s ease; /* 添加过渡效果 */
