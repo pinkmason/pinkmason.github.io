@@ -4,7 +4,7 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="css/nav-styles.css">
+  <link rel="stylesheet" href="css/nav-styles copy.css">
   <title>pinkmason的导航</title>
   <!-- 搜索脚本 -->
   <script>
@@ -40,7 +40,17 @@
       <input type="text" id="searchInput" class="search-input" placeholder="请输入搜索关键词"
         onkeypress="handleKeyPress(event)">
       <button style="display:none;" type="button" class="search-button" onclick="searchBaidu()">搜索</button>
+      <div id="searchtype" style="display: flex; justify-content: center; align-items: center; ">
+        <img id="icon" src="media/baidu.svg" width=70% height=70% alt="搜索引擎图标">
+      </div>
     </form>
+  </div>
+  <!-- 搜索引擎 -->
+  <div id="searchmenu" style="display: none;justify-content: space-around;">
+    <div class="search-engine" data-svg="media/baidu.svg">百度</div>
+    <div class="search-engine" data-svg="media/google.svg">谷歌</div>
+    <div class="search-engine" data-svg="media/sogou.svg">搜狗</div>
+    <div class="search-engine" data-svg="media/bing.svg">必应</div>
   </div>
   <!-- 常用网站 -->
   <ul class="website active">
@@ -142,5 +152,22 @@
       webs[2].classList.add('active'); // 添加active类，显示内容
       randomizeElements(); //随机网站
     }); 
+  </script>
+  <!-- 搜索引擎切换 -->
+  <script>
+    document.getElementById('searchtype').addEventListener('click', function () {
+      var sm = document.getElementById('searchmenu');
+      sm.style.display = "flex";
+    });
+    document.querySelectorAll('.search-engine').forEach(function (se) {
+      se.addEventListener('click', function (event) {
+        // console.log(this);
+        console.log(event.currentTarget);
+        var imgElement = document.getElementById('icon');
+        imgElement.src = event.currentTarget.getAttribute('data-svg');
+        var sm = document.getElementById('searchmenu');
+        sm.style.display = "none";
+      })
+    })
   </script>
 </body>
