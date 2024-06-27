@@ -4,16 +4,17 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="css/nav-styles copy.css">
+  <link rel="stylesheet" href="css/nav.css">
   <title>pinkmason的导航</title>
   <!-- 搜索脚本 -->
   <script>
     function searchBaidu() {
       // 获取搜索框中的值
       var searchTerm = document.getElementById('searchInput').value;
-      // 构建百度搜索的URL（注意：这里使用的是百度搜索的公共URL）
-      var baiduSearchUrl = 'https://www.baidu.com/s?wd=' + encodeURIComponent(searchTerm);
-      // 重定向到百度搜索页面
+      //获取搜索引擎
+      var link = document.getElementById('icon').getAttribute('data-link')
+      var baiduSearchUrl = link + encodeURIComponent(searchTerm);
+      // 重定搜索
       window.open(baiduSearchUrl, '_blank');
     }
     function handleKeyPress(event) {
@@ -28,9 +29,9 @@
   <!-- 导航条 -->
   <div class="navbar">
     <div class="nav-item"><a href="index.html" target="_blank">返回主页</a></div>
-    <div class="nav-item"><a>常用</a></div>
-    <div class="nav-item"><a>娱乐</a></div>
-    <div class="nav-item"><a>工具</a></div>
+    <div class="nav-item" data-linksite="cysite"><a>常用</a></div>
+    <div class="nav-item" data-linksite="ylsite"><a>娱乐</a></div>
+    <div class="nav-item" data-linksite="gjsite"><a>工具</a></div>
     <!-- 文件浏览功能 -->
     <div style="display:none;" class="nav-item"><a href="..\..\" target="_blank">资料</a></div>
   </div>
@@ -40,20 +41,25 @@
       <input type="text" id="searchInput" class="search-input" placeholder="请输入搜索关键词"
         onkeypress="handleKeyPress(event)">
       <button style="display:none;" type="button" class="search-button" onclick="searchBaidu()">搜索</button>
+      <!-- 搜索引擎图标 -->
       <div id="searchtype" style="display: flex; justify-content: center; align-items: center; ">
-        <img id="icon" src="media/baidu.svg" width=70% height=70% alt="搜索引擎图标">
+        <img id="icon" src="media/baidu.svg" data-link="https://www.baidu.com/s?wd=" width=70% height=70% alt="搜索引擎图标">
       </div>
     </form>
   </div>
   <!-- 搜索引擎 -->
   <div id="searchmenu" style="display: none;justify-content: space-around;">
-    <div class="search-engine" data-svg="media/baidu.svg">百度</div>
-    <div class="search-engine" data-svg="media/google.svg">谷歌</div>
-    <div class="search-engine" data-svg="media/sogou.svg">搜狗</div>
-    <div class="search-engine" data-svg="media/bing.svg">必应</div>
+    <div style="color: blue;" class="search-engine" data-svg="media/baidu.svg" data-link="https://www.baidu.com/s?wd=">
+      百度</div>
+    <div style="color: blue;" class="search-engine" data-svg="media/google.svg"
+      data-link="https://www.google.com/search?q=">谷歌</div>
+    <div style="color: blue;" class="search-engine" data-svg="media/sogou.svg"
+      data-link="https://www.sogou.com/web?query=">搜狗</div>
+    <div style="color: blue;" class="search-engine" data-svg="media/bing.svg" data-link="https://cn.bing.com/search?q=">
+      必应</div>
   </div>
   <!-- 常用网站 -->
-  <ul class="website active">
+  <ul id="cysite" class="website active">
     <a href="https://docs.qq.com/desktop/" target="_blank">腾讯文档</a>
     <a href="http://www.github.com/" target="_blank">Github</a>
     <a href="https://fanyi.baidu.com/" target="_blank">百度翻译</a>
@@ -77,13 +83,13 @@
     <a href="https://www.jd.com/" target="_blank">京东</a>
   </ul>
   <!-- 娱乐网站 -->
-  <ul class="website">
+  <ul id="ylsite" class="website">
     <a href="https://store.steampowered.com/" target="_blank">Steam</a>
     <a href="https://js13kgames.com/" target="_blank">js13k</a>
     <a href="https://www.tennis.com/" target="_blank">Tennis</a>
   </ul>
   <!-- 工具网站 -->
-  <ul class="website">
+  <ul id="gjsite" class="website">
     <a href="https://www.filetypeadvisor.com/zh-cn/" target="_blank">文件格式</a>
     <a href="https://scandomain.cyayaa.com/#/" target="_blank">域名查询</a>
     <a href="http://duososo.com/index_shitu.php" target="_blank">以图搜图</a>
@@ -115,43 +121,24 @@
       shuffledItems.forEach(item => webs.appendChild(item));
     }
 
-    randomizeElements(); 
+    //randomizeElements(); 
   </script>
-  <!-- 导航栏脚本-待优化 -->
+  <!-- 导航栏脚本 -->
   <script>
     // 常用-点击事件
-    document.getElementsByClassName('nav-item')[1].addEventListener('click', function () {
-      // 获取所有的内容容器
-      var webs = document.querySelectorAll('.website');
-      // 遍历所有的内容容器，并隐藏它们
-      webs.forEach(function (web) {
-        web.classList.remove('active'); // 移除active类，隐藏内容
-      });
-      webs[0].classList.add('active'); // 添加active类，显示内容
-      randomizeElements(); //随机网站
-    });
-    // 娱乐-点击事件
-    document.getElementsByClassName('nav-item')[2].addEventListener('click', function () {
-      // 获取所有的内容容器
-      var webs = document.querySelectorAll('.website');
-      // 遍历所有的内容容器，并隐藏它们
-      webs.forEach(function (web) {
-        web.classList.remove('active'); // 移除active类，隐藏内容
-      });
-      webs[1].classList.add('active'); // 添加active类，显示内容
-      randomizeElements(); //随机网站
-    });
-    // 工具-点击事件
-    document.getElementsByClassName('nav-item')[3].addEventListener('click', function () {
-      // 获取所有的内容容器
-      var webs = document.querySelectorAll('.website');
-      // 遍历所有的内容容器，并隐藏它们
-      webs.forEach(function (web) {
-        web.classList.remove('active'); // 移除active类，隐藏内容
-      });
-      webs[2].classList.add('active'); // 添加active类，显示内容
-      randomizeElements(); //随机网站
-    }); 
+    document.querySelectorAll(".nav-item:nth-child(2),.nav-item:nth-child(3),.nav-item:nth-child(4)").forEach(function (ni) {
+      ni.addEventListener('click', function () {
+        //console.log(this);
+        var webs = document.querySelectorAll('.website');
+        // 遍历所有的内容容器，并隐藏它们
+        webs.forEach(function (web) {
+          web.classList.remove('active'); // 移除active类，隐藏内容
+        });
+        var nowsite = document.getElementById(this.getAttribute('data-linksite'));
+        nowsite.classList.add('active'); // 添加active类，显示内容
+        randomizeElements(); //随机网站
+      })
+    })
   </script>
   <!-- 搜索引擎切换 -->
   <script>
@@ -160,11 +147,12 @@
       sm.style.display = "flex";
     });
     document.querySelectorAll('.search-engine').forEach(function (se) {
-      se.addEventListener('click', function (event) {
+      se.addEventListener('click', function () {
         // console.log(this);
-        console.log(event.currentTarget);
+        //console.log(event.currentTarget);方法也可以
         var imgElement = document.getElementById('icon');
-        imgElement.src = event.currentTarget.getAttribute('data-svg');
+        imgElement.src = this.getAttribute('data-svg');
+        imgElement.dataset.link = this.getAttribute('data-link');//setAttribute需要data前缀
         var sm = document.getElementById('searchmenu');
         sm.style.display = "none";
       })
