@@ -6,32 +6,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/nav.css">
   <title>pinkmason的导航</title>
-  <!-- 搜索脚本 -->
-  <script>
-    function searchBaidu() {
-      // 获取搜索框中的值
-      var searchTerm = document.getElementById('searchInput').value;
-      //获取搜索引擎
-      var link = document.getElementById('icon').getAttribute('data-link')
-      var baiduSearchUrl = link + encodeURIComponent(searchTerm);
-      // 重定搜索
-      window.open(baiduSearchUrl, '_blank');
-    }
-    function handleKeyPress(event) {
-      if (event.key === 'Enter') {
-        searchBaidu();
-      }
-    }
-  </script>
 </head>
 
 <body>
   <!-- 导航条 -->
   <div class="navbar">
     <div class="nav-item"><a href="index.html" target="_blank">返回主页</a></div>
-    <div class="nav-item" data-linksite="cysite"><a>常用</a></div>
-    <div class="nav-item" data-linksite="ylsite"><a>娱乐</a></div>
-    <div class="nav-item" data-linksite="gjsite"><a>工具</a></div>
+    <div class="nav-item linksite" data-linksite="cysite"><a>常用</a></div>
+    <div class="nav-item linksite" data-linksite="ylsite"><a>娱乐</a></div>
+    <div class="nav-item linksite" data-linksite="gjsite"><a>工具</a></div>
     <!-- 文件浏览功能 -->
     <div style="display:none;" class="nav-item"><a href="..\..\" target="_blank">资料</a></div>
   </div>
@@ -43,7 +26,8 @@
       <button style="display:none;" type="button" class="search-button" onclick="searchBaidu()">搜索</button>
       <!-- 搜索引擎图标 -->
       <div id="searchtype" style="display: flex; justify-content: center; align-items: center; ">
-        <img id="icon" src="media/baidu.svg" data-link="https://www.baidu.com/s?wd=" width=70% height=70% alt="搜索引擎图标">
+        <img id="search-icon" src="media/baidu.svg" data-link="https://www.baidu.com/s?wd=" width=70% height=70%
+          alt="搜索引擎图标">
       </div>
     </form>
   </div>
@@ -96,6 +80,23 @@
     <a href="https://kydsj.vip/doku.php?id=start" target="_blank">开源大世界</a>
     <a href="https://www.waytoagi.com/" target="_blank">WaytoAGI</a>
   </ul>
+  <!-- 搜索脚本 -->
+  <script>
+    function searchBaidu() {
+      // 获取搜索框中的值
+      var searchTerm = document.getElementById('searchInput').value;
+      //获取搜索引擎
+      var searchlink = document.getElementById('search-icon').getAttribute('data-link')
+      var baiduSearchUrl = searchlink + encodeURIComponent(searchTerm);
+      // 重定搜索
+      window.open(baiduSearchUrl, '_blank');
+    }
+    function handleKeyPress(event) {
+      if (event.key === 'Enter') {
+        searchBaidu();
+      }
+    }
+  </script>
   <!-- 随机排列网站 -->
   <script>
     // 数组随机化
@@ -108,25 +109,24 @@
     }
 
     function randomizeElements() {
-      const webs = document.querySelector('.website.active');//获取ul对象
-      const items = Array.from(webs.children);
-      const shuffledItems = shuffleArray(items);
+      const activewebsite = document.querySelector('.website.active');//获取ul对象
+      const websiteitems = Array.from(activewebsite.children);
+      const shuffledItems = shuffleArray(websiteitems);
 
       // 清除ul子项
-      while (webs.firstChild) {
-        webs.removeChild(webs.firstChild);
+      while (activewebsite.firstChild) {
+        activewebsite.removeChild(activewebsite.firstChild);
       }
 
       // 添加子项
-      shuffledItems.forEach(item => webs.appendChild(item));
+      shuffledItems.forEach(item => activewebsite.appendChild(item));
     }
 
     //randomizeElements(); 
   </script>
   <!-- 导航栏脚本 -->
   <script>
-    // 常用-点击事件
-    document.querySelectorAll(".nav-item:nth-child(2),.nav-item:nth-child(3),.nav-item:nth-child(4)").forEach(function (ni) {
+    document.querySelectorAll(".nav-item.linksite").forEach(function (ni) {
       ni.addEventListener('click', function () {
         //console.log(this);
         var webs = document.querySelectorAll('.website');
@@ -150,7 +150,7 @@
       se.addEventListener('click', function () {
         // console.log(this);
         //console.log(event.currentTarget);方法也可以
-        var imgElement = document.getElementById('icon');
+        var imgElement = document.getElementById('search-icon');
         imgElement.src = this.getAttribute('data-svg');
         imgElement.dataset.link = this.getAttribute('data-link');//setAttribute需要data前缀
         var sm = document.getElementById('searchmenu');

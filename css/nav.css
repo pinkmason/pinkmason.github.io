@@ -50,18 +50,6 @@ body {
     position: relative;
 }
 
-#searchtype {
-    position: absolute;
-    right: 0;
-    top: 0;
-    height: 100%;
-    width: auto;
-    border: none;
-    border-radius: 0 5px 5px 0;
-    padding: 0px 0px;
-    cursor: pointer;
-}
-
 .search-input {
     width: 100%;
     padding: 10px;
@@ -81,6 +69,18 @@ body {
     color: #fff;
     border-radius: 0 5px 5px 0;
     padding: 0 15px;
+    cursor: pointer;
+}
+
+#searchtype {
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+    width: auto;
+    border: none;
+    border-radius: 0 5px 5px 0;
+    padding: 0px 0px;
     cursor: pointer;
 }
 
