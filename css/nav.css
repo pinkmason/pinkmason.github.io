@@ -103,7 +103,8 @@ body {
     width: 22%;
     height: 60px;
     text-align: center;
-    line-height: 60px;
+    line-height: 30px;
+    /*为了处理换行，待优化*/
     display: inline-block;
     /* 使其表现得像块级元素，但可以在行内显示 */
     transition: all 0.3s ease;
