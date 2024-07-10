@@ -3,18 +3,18 @@
         "kind": "web_1",
         "id": 1,
         "title": "cs",
-        "href": "https://www.ousetonae.com",
-        "slogan": "分享一些没用的小技巧&生活随记",
-        "kind_name": "常用&生活&技术",
+        "href": "https://www.xxxx.com",
+        "slogan": "cc",
+        "kind_name": "kk",
         "star": "star"
     },
     {
         "kind": "web_1",
         "id": 2,
         "title": "cs2",
-        "href": "https://www.ousetonae.com/count",
-        "slogan": "阴历新年倒计时",
-        "kind_name": "生活",
+        "href": "https://www.xxxx.com/count",
+        "slogan": "kk",
+        "kind_name": "cc",
         "star": null
     }
 ]
