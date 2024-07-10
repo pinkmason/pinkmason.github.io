@@ -94,14 +94,14 @@
   </ul>
   <script src="./js/nav.js"></script>
   <script>
-    var jsonString = '{"name":"John Doe","age":30,"city":"New York"}';
+    /* var jsonString = '{"name":"John Doe","age":30,"city":"New York"}';
     var data1 = JSON.parse(jsonString);
-    console.log(data1.name);
+    console.log(data1.name); */
     fetch('./json/nav.json')
       .then(response => response.json()) // 将响应体解析为JSON
       .then(data => {
-        console.log(data); // 打印整个对象
-        console.log(data.name); // 打印对象的"name"属性
+        // console.log(data); // 打印整个对象
+        console.log(data.web_list[0].href); // 打印对象的"name"属性
       })
       .catch((error) => {
         console.error('Error:', error);
