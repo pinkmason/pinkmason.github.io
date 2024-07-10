@@ -93,4 +93,15 @@
     <!-- <a href="" target="_blank"></a> -->
   </ul>
   <script src="./js/nav.js"></script>
+  <script>
+    fetch('./json/nav.json')
+      .then(response => response.json()) // 将响应体解析为JSON
+      .then(data => {
+        console.log(data); // 打印整个对象
+        console.log(data.name); // 打印对象的"name"属性
+      })
+      .catch((error) => {
+        console.error('Error:', error);
+      });
+  </script>
 </body>
