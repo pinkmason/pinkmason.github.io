@@ -94,6 +94,9 @@
   </ul>
   <script src="./js/nav.js"></script>
   <script>
+    var jsonString = '{"name":"John Doe","age":30,"city":"New York"}';
+    var data = JSON.parse(jsonString);
+    console.log(data.name);
     fetch('./json/nav.json')
       .then(response => response.json()) // 将响应体解析为JSON
       .then(data => {
