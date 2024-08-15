@@ -16,15 +16,15 @@ function handleKeyPress(event) {
 
 //随机排列网站
 // 数组随机化
-function shuffleArray(array) {
+/* function shuffleArray(array) {
     for (let i = array.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * (i + 1));
         [array[i], array[j]] = [array[j], array[i]];
     }
     return array;
 }
-function randomizeElements() {
-    const activewebsite = document.querySelector('.website.active');//获取ul对象
+function randomizeElements(activewebsite) {
+    //const activewebsite = document.querySelector('.website.active');//获取ul对象
     const websiteitems = Array.from(activewebsite.children);
     const shuffledItems = shuffleArray(websiteitems);
     // 清除ul子项
@@ -33,7 +33,7 @@ function randomizeElements() {
     }
     // 添加子项
     shuffledItems.forEach(item => activewebsite.appendChild(item));
-}
+} */
 //randomizeElements(); 
 
 //导航栏脚本
@@ -47,7 +47,7 @@ document.querySelectorAll(".nav-item.linksite").forEach(function (ni) {
         });
         var nowsite = document.getElementById(this.getAttribute('data-linksite'));
         nowsite.classList.add('active'); // 添加active类，显示内容
-        randomizeElements(); //随机网站
+        //randomizeElements(nowsite); //随机网站
     })
 })
 
