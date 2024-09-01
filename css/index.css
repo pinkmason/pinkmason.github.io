@@ -12,13 +12,28 @@ h1 {
 
 ul {
     display: flex;
+    padding-left: 0;
+    margin-top: 10%;
+    /* 消除左侧空白 */
+    flex-flow: row wrap;
     justify-content: center;
-    margin: 10% auto;
-    padding: 0;
 }
 
-li {
+ul a {
+    text-decoration: none;
+    /* 移除下划线 */
+    width: 10%;
+    height: 60px;
+    align-content: center;
+    /* 2024新增特性 */
+    text-align: center;
+    /* line-height: 30px; */
+    /*用新特性优化*/
     display: inline-block;
-    margin: 0 1em;
-    font-size: 1.2em;
+    /* 使其表现得像块级元素，但可以在行内显示 */
+    transition: all 0.3s ease;
+    /* 添加过渡效果 */
+    word-wrap: break-word;
+    /* 防止长单词不换行 */
+    color: black;
 }
