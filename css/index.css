@@ -15,7 +15,7 @@ div {
     margin-top: 10%;
     /* 消除ul左侧空白 */
     /* padding-left: 0; */
-    /* flex-flow: row wrap; */
+    flex-flow: row wrap;
     justify-content: center;
 }
 

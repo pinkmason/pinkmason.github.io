@@ -84,12 +84,12 @@ body {
     cursor: pointer;
 }
 
-/* 网站 */
+/* 网站-之前用的ul */
 .website.active {
     display: flex;
     /* 消除ul左侧空白 */
-    /* padding-left: 0;
-    flex-flow: row wrap; */
+    /* padding-left: 0; */
+    flex-flow: row wrap;
     justify-content: center;
 }
 
