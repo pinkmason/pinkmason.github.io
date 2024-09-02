@@ -20,7 +20,7 @@
   </div>
   <!-- 搜索框 -->
   <div class="search-container">
-    <form onsubmit="event.preventDefault()"><!-- 阻止表单默认的提交行为,; searchBaidu();这里面也可以加 -->
+    <form onsubmit="event.preventDefadivt()"><!-- 阻止表单默认的提交行为,; searchBaidu();这里面也可以加 -->
       <input type="text" id="searchInput" class="search-input" placeholder="请输入搜索关键词"
         onkeypress="handleKeyPress(event)">
       <button style="display:none;" type="button" class="search-button" onclick="searchBaidu()">搜索</button>
@@ -44,7 +44,7 @@
   </div>
   <!-- <a href="" target="_blank"></a> -->
   <!-- 常用网站 -->
-  <ul id="cysite" class="website active">
+  <div id="cysite" class="website active">
     <a href="https://docs.qq.com/desktop/" target="_blank">腾讯文档</a>
     <a href="http://www.github.com/" target="_blank">Github</a>
     <a href="https://fanyi.baidu.com/" target="_blank">百度翻译</a>
@@ -61,9 +61,9 @@
     <a href="https://www.qireader.com/" target="_blank">Qireader</a>
     <a href="https://regex101.com/" target="_blank">regex101</a>
     <a href="https://scoop.sh/#/apps" target="_blank">scoop</a>
-  </ul>
+  </div>
   <!-- 工具网站 -->
-  <ul id="gjsite" class="website">
+  <div id="gjsite" class="website">
     <a href="https://www.filetypeadvisor.com/zh-cn/" target="_blank">文件格式</a>
     <a href="https://scandomain.cyayaa.com/#/" target="_blank">域名查询</a>
     <a href="http://duososo.com/index_shitu.php" target="_blank">以图搜图</a>
@@ -72,7 +72,7 @@
     <a href="https://snapdrop.net/" target="_blank">snapdrop</a>
     <a href="https://www.voidtools.com/zh-cn/" target="_blank">everything</a>
     <a href="https://github.com/BluePointLilac/ContextMenuManager" target="_blank">ContextMenu</a>
-    <a href="https://github.com/Chuyu-Team/Dism-Multi-language" target="_blank">Dism++</a>
+    <a href="https://github.com/Chuyu-Team/Dism-Mdivti-language" target="_blank">Dism++</a>
     <a href="https://github.com/microsoft/PowerToys" target="_blank">PowerToys</a>
     <a href="https://www.petges.lu/" target="_blank">AttributeChanger</a>
     <a href="http://ffmpeg.org/" target="_blank">ffmpeg</a>
@@ -80,9 +80,9 @@
     <a href="https://shuangpin.simplenaive.cn/#/" target="_blank">纸砚双拼</a>
     <a href="https://github.com/DIYgod/RSSHub" target="_blank">RSSHub</a>
     <a href="https://krosbits.in/musicolet/" target="_blank">musicolet</a>
-  </ul>
+  </div>
   <!-- 政务网站 -->
-  <ul id="zwsite" class="website">
+  <div id="zwsite" class="website">
     <a href="https://www.chsi.com.cn/" target="_blank">学信网</a>
     <a href="https://flk.npc.gov.cn/index.html" target="_blank">法律法规数据库</a>
     <a href="https://www.gov.cn/" target="_blank">政府网</a>
@@ -91,9 +91,9 @@
     <a href="https://www.court.gov.cn/" target="_blank">最高法院</a>
     <a href="http://gjzwfw.www.gov.cn/index.html" target="_blank">国家政务服务</a>
     <a href="http://www.12333.gov.cn/portal/index" target="_blank">全国人社服务</a>
-  </ul>
+  </div>
   <!-- 娱乐网站 -->
-  <ul id="ylsite" class="website">
+  <div id="ylsite" class="website">
     <a href="https://www.douban.com/" target="_blank">豆瓣</a>
     <a href="https://www.hupu.com/" target="_blank">虎扑</a>
     <a href="https://weibo.com/mygroups?gid=110007866062868" target="_blank">新浪微博</a>
@@ -111,7 +111,7 @@
     <a href="ms-settings:dateandtime" target="_blank">时间和日期</a>
     <a href="mailto:" target="_blank">mailto邮箱</a>
     <a href="F:" target="_blank">F盘</a><!--可添加脚本实现输入路径-->
-  </ul>
+  </div>
   <script src="./js/nav.js"></script>
   <!--   <script>
     /* var jsonString = '{"name":"John Doe","age":30,"city":"New York"}';

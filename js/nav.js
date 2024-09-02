@@ -24,10 +24,10 @@ function handleKeyPress(event) {
     return array;
 }
 function randomizeElements(activewebsite) {
-    //const activewebsite = document.querySelector('.website.active');//获取ul对象
+    //const activewebsite = document.querySelector('.website.active');//获取div对象
     const websiteitems = Array.from(activewebsite.children);
     const shuffledItems = shuffleArray(websiteitems);
-    // 清除ul子项
+    // 清除div子项
     while (activewebsite.firstChild) {
         activewebsite.removeChild(activewebsite.firstChild);
     }

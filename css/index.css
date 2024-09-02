@@ -10,16 +10,16 @@ h1 {
     text-align: center;
 }
 
-ul {
+div {
     display: flex;
-    padding-left: 0;
     margin-top: 10%;
-    /* 消除左侧空白 */
-    flex-flow: row wrap;
+    /* 消除ul左侧空白 */
+    /* padding-left: 0; */
+    /* flex-flow: row wrap; */
     justify-content: center;
 }
 
-ul a {
+div a {
     text-decoration: none;
     /* 移除下划线 */
     width: 20%;
@@ -28,7 +28,6 @@ ul a {
     /* 2024新增特性 */
     text-align: center;
     /* line-height: 30px; */
-    /*用新特性优化*/
     display: inline-block;
     /* 使其表现得像块级元素，但可以在行内显示 */
     transition: all 0.3s ease;

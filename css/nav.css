@@ -87,9 +87,9 @@ body {
 /* 网站 */
 .website.active {
     display: flex;
-    padding-left: 0;
-    /* 消除左侧空白 */
-    flex-flow: row wrap;
+    /* 消除ul左侧空白 */
+    /* padding-left: 0;
+    flex-flow: row wrap; */
     justify-content: center;
 }
 
@@ -106,7 +106,6 @@ body {
     /* 2024新增特性 */
     text-align: center;
     /* line-height: 30px; */
-    /*用新特性优化*/
     display: inline-block;
     /* 使其表现得像块级元素，但可以在行内显示 */
     transition: all 0.3s ease;
