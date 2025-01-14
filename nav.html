@@ -129,9 +129,10 @@
         var ls = '<a href="' + data[xx][0].link + '" target="_blank">' + data[xx][0].name + '</a>'
         console.log(ls)
 
-        let result = [];
+        let result = '';
         for (const site of data[xx]) {
-          result.push('<a href="' + site.link + '" target="_blank">' + site.name + '</a>'); // 去除link两侧的空格并拼接
+          result += '<a href="' + site.link + '" target="_blank">' + site.name + '</a>';
+          //通过获取id插入到指定位置实现修改页面 
         }
         console.log(result)
       })
