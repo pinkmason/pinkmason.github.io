@@ -120,10 +120,12 @@
     fetch('./json/nav.json')
       .then(response => response.json()) // 将响应体解析为JSON
       .then(data => {
-        //console.log(data); // 打印整个对象
+        console.log(data); // 打印整个对象
         console.log(data.cysite); // 打印对象的属性
         console.log(data.cysite[0]);
         console.log(data.cysite[0].name);
+        var ls = '<a href="' + data.cysite[0].link + '" target="_blank">' + data.cysite[0].name + '</a>'
+        console.log(ls)
       })
       .catch((error) => {
         console.error('Error:', error);
