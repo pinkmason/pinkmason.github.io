@@ -117,15 +117,23 @@
     /* var jsonString = '{"name":"John Doe","age":30,"city":"New York"}';
     var data1 = JSON.parse(jsonString);
     console.log(data1.name); */
+    //可给导航条的项目添加点击事件获取data来实现通过json修改页面，不过不能本地运行
     fetch('./json/nav.json')
       .then(response => response.json()) // 将响应体解析为JSON
       .then(data => {
         console.log(data); // 打印整个对象
-        console.log(data.cysite); // 打印对象的属性
-        console.log(data.cysite[0]);
-        console.log(data.cysite[0].name);
-        var ls = '<a href="' + data.cysite[0].link + '" target="_blank">' + data.cysite[0].name + '</a>'
+        var xx = 'cysite';
+        console.log(data.xx); // 打印对象的属性
+        console.log(data.xx[0]);
+        console.log(data.xx[0].name);
+        var ls = '<a href="' + data.xx[0].link + '" target="_blank">' + data.xx[0].name + '</a>'
         console.log(ls)
+
+        let result = [];
+        for (const site of data.xx) {
+          result.push('<a href="' + site.link + '" target="_blank">' + site.name + '</a>'); // 去除link两侧的空格并拼接
+        }
+        console.log(result)
       })
       .catch((error) => {
         console.error('Error:', error);
