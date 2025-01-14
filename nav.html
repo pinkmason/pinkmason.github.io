@@ -120,8 +120,8 @@
     fetch('./json/nav.json')
       .then(response => response.json()) // 将响应体解析为JSON
       .then(data => {
-        console.log(data); // 打印整个对象
-        //console.log(data[0].title); // 打印对象的"href"属性
+        //console.log(data); // 打印整个对象
+        console.log(data.cysite); // 打印对象的属性
       })
       .catch((error) => {
         console.error('Error:', error);
