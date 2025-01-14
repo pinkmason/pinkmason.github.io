@@ -113,18 +113,18 @@
     <a href="F:" target="_blank">F盘</a><!--可添加脚本实现输入路径-->
   </div>
   <script src="./js/nav.js"></script>
-  <!--   <script>
+  <script>
     /* var jsonString = '{"name":"John Doe","age":30,"city":"New York"}';
     var data1 = JSON.parse(jsonString);
     console.log(data1.name); */
     fetch('./json/nav.json')
       .then(response => response.json()) // 将响应体解析为JSON
       .then(data => {
-        // console.log(data); // 打印整个对象
-        console.log(data[0].title); // 打印对象的"href"属性
+        console.log(data); // 打印整个对象
+        //console.log(data[0].title); // 打印对象的"href"属性
       })
       .catch((error) => {
         console.error('Error:', error);
       }); 
-  </script> 操作json数据实践-->
+  </script> <!-- 操作json数据实践 -->
 </body>

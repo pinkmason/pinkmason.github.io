@@ -1,20 +1,22 @@
-[
-    {
-        "kind": "web_1",
-        "id": 1,
-        "title": "cs",
-        "href": "https://www.xxxx.com",
-        "slogan": "cc",
-        "kind_name": "kk",
-        "star": "star"
-    },
-    {
-        "kind": "web_1",
-        "id": 2,
-        "title": "cs2",
-        "href": "https://www.xxxx.com/count",
-        "slogan": "kk",
-        "kind_name": "cc",
-        "star": null
-    }
-]
+{
+    "gjsite": [
+        {
+            "name": "cs",
+            "link": "jj"
+        },
+        {
+            "name": "cs1",
+            "link": "jj1"
+        }
+    ],
+    "cysite": [
+        {
+            "name": "cs",
+            "link": "jj"
+        },
+        {
+            "name": "cs1",
+            "link": "jj1"
+        }
+    ]
+}
