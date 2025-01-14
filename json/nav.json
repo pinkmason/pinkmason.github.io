@@ -1,22 +1,22 @@
 {
     "gjsite": [
         {
-            "name": "cs",
-            "link": "jj"
+            "name": "snapdrop",
+            "link": "https://snapdrop.net/"
         },
         {
-            "name": "cs1",
-            "link": "jj1"
+            "name": "WaytoAGI",
+            "link": "https://www.waytoagi.com/"
         }
     ],
     "cysite": [
         {
-            "name": "cs",
-            "link": "jj"
+            "name": "腾讯文档",
+            "link": "https://docs.qq.com/desktop/"
         },
         {
-            "name": "cs1",
-            "link": "jj1"
+            "name": "知乎",
+            "link": "https://www.zhihu.com/hot"
         }
     ]
 }

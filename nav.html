@@ -122,6 +122,8 @@
       .then(data => {
         //console.log(data); // 打印整个对象
         console.log(data.cysite); // 打印对象的属性
+        console.log(data.cysite[0]);
+        console.log(data.cysite[0].name);
       })
       .catch((error) => {
         console.error('Error:', error);
