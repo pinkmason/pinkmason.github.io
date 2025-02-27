@@ -1,5 +1,6 @@
 a {
     text-decoration: none;
+    /* 移除下划线 */
     color: black;
 }
 
@@ -20,8 +21,6 @@ div {
 }
 
 div a {
-    text-decoration: none;
-    /* 移除下划线 */
     width: 20%;
     height: 60px;
     align-content: center;
@@ -34,5 +33,4 @@ div a {
     /* 添加过渡效果 */
     word-wrap: break-word;
     /* 防止长单词不换行 */
-    color: black;
 }
