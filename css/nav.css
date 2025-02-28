@@ -115,7 +115,7 @@ body {
     color: black;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 1000px) {
     .website a {
         width: 40%;
         /* 对小屏幕设备进行调整，min对大屏幕进行调整 */
