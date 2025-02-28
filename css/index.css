@@ -1,10 +1,29 @@
+html,
+body {
+    height: 100%;
+    /* 确保 html 和 body 高度占满整个视口 */
+    margin: 0;
+    /* 去掉默认外边距 */
+    padding: 0;
+    /* 去掉默认内边距 */
+}
+
 html {
+    display: table;
+    /* 使用表格布局 */
+    width: 100%;
+    /* 确保 html 宽度占满视口 */
+    margin: 0 auto;
+    padding: 0;
+}
+
+/* html {
     height: 100%;
     display: table;
     margin: 0 auto;
     padding: 0;
     width: 100%;
-}
+} */
 
 body {
     min-height: 100%;
