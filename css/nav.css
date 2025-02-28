@@ -115,6 +115,18 @@ body {
     color: black;
 }
 
+@media (max-width: 600px) {
+    .website a {
+        width: 40%;
+        /* 对小屏幕设备进行调整，min对大屏幕进行调整 */
+    }
+}
+
+/* 另一种方法 */
+/* width: 30vw; 
+max-width: 300px; 
+min-width: 150px;  */
+
 .website a:hover {
     background-color: #8188d8;
     /* 鼠标悬停时的背景色 */
