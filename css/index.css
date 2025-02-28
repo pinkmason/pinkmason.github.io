@@ -3,6 +3,7 @@ html {
     display: table;
     margin: 0 auto;
     padding: 0;
+    width: 100%;
 }
 
 body {
@@ -18,6 +19,11 @@ a {
     text-decoration: none;
     /* 移除下划线 */
     color: black;
+}
+
+a:hover {
+    color: #f80b0b;
+    /* 鼠标悬停时的背景色 */
 }
 
 h1 {
