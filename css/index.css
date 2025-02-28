@@ -17,14 +17,6 @@ html {
     padding: 0;
 }
 
-/* html {
-    height: 100%;
-    display: table;
-    margin: 0 auto;
-    padding: 0;
-    width: 100%;
-} */
-
 body {
     min-height: 100%;
     display: table-cell;
@@ -47,7 +39,7 @@ a:hover {
 
 h1 {
     margin: 0 0 0 0;
-    font-size: 6em;
+    font-size: 4em;
     letter-spacing: 0.01em;
 }
 
