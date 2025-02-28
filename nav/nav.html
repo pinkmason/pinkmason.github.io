@@ -5,14 +5,14 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="css/nav.css">
+  <link rel="stylesheet" href="../css/nav.css">
   <title>pinkmason的导航</title>
 </head>
 
 <body>
   <!-- 导航条 -->
   <div class="navbar">
-    <div class="nav-item" style="position: absolute;right: 8px;"><a href="index.html" target="_blank">返回主页</a></div>
+    <div class="nav-item" style="position:absolute;right: 8px;"><a href="../index.html" target="_blank">返回主页</a></div>
     <div class="nav-item linksite" data-linksite="cysite"><a>常用</a></div>
     <div class="nav-item linksite" data-linksite="gjsite"><a>工具</a></div>
     <div class="nav-item linksite" data-linksite="zwsite"><a>政务</a></div>
@@ -26,20 +26,22 @@
       <button style="display:none;" type="button" class="search-button" onclick="searchBaidu()">搜索</button>
       <!-- 搜索引擎图标 -->
       <div id="searchtype" style="display: flex; justify-content: center; align-items: center; ">
-        <img id="search-icon" src="media/baidu.svg" data-link="https://www.baidu.com/s?wd=" width=70% height=70%
+        <img id="search-icon" src="../media/baidu.svg" data-link="https://www.baidu.com/s?wd=" width=70% height=70%
           alt="搜索引擎图标">
       </div>
     </form>
   </div>
   <!-- 搜索引擎 -->
   <div id="searchmenu" style="display: none;justify-content: space-around;">
-    <div style="color: blue;" class="search-engine" data-svg="media/baidu.svg" data-link="https://www.baidu.com/s?wd=">
+    <div style="color: blue;" class="search-engine" data-svg="../media/baidu.svg"
+      data-link="https://www.baidu.com/s?wd=">
       百度</div>
-    <div style="color: blue;" class="search-engine" data-svg="media/google.svg"
+    <div style="color: blue;" class="search-engine" data-svg="../media/google.svg"
       data-link="https://www.google.com/search?q=">谷歌</div>
-    <div style="color: blue;" class="search-engine" data-svg="media/sogou.svg"
+    <div style="color: blue;" class="search-engine" data-svg="../media/sogou.svg"
       data-link="https://www.sogou.com/web?query=">搜狗</div>
-    <div style="color: blue;" class="search-engine" data-svg="media/bing.svg" data-link="https://cn.bing.com/search?q=">
+    <div style="color: blue;" class="search-engine" data-svg="../media/bing.svg"
+      data-link="https://cn.bing.com/search?q=">
       必应</div>
   </div>
   <!-- <a href="" target="_blank"></a> -->
@@ -112,7 +114,7 @@
     <a href="mailto:" target="_blank">mailto邮箱</a>
     <a href="F:" target="_blank">F盘</a><!--可添加脚本实现输入路径-->
   </div>
-  <script src="./js/nav.js"></script>
+  <script src="../js/nav.js"></script>
   <!--  <script>
     /* var jsonString = '{"name":"John Doe","age":30,"city":"New York"}';
     var data1 = JSON.parse(jsonString);
