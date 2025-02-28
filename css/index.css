@@ -1,3 +1,19 @@
+html {
+    height: 100%;
+    display: table;
+    margin: 0 auto;
+    padding: 0;
+}
+
+body {
+    min-height: 100%;
+    display: table-cell;
+    vertical-align: middle;
+    margin: 0 auto;
+    padding: 0;
+    text-align: center;
+}
+
 a {
     text-decoration: none;
     /* 移除下划线 */
@@ -5,10 +21,9 @@ a {
 }
 
 h1 {
-    margin: 10% 0 0 0;
-    /*     font-size: 6em;
-    letter-spacing: 0.1em; */
-    text-align: center;
+    margin: 0 0 0 0;
+    font-size: 6em;
+    letter-spacing: 0.01em;
 }
 
 div {
@@ -23,9 +38,9 @@ div {
 div a {
     width: 20%;
     height: 60px;
+    font-size: 1.5em;
     align-content: center;
     /* 2024新增特性 */
-    text-align: center;
     /* line-height: 30px; */
     display: inline-block;
     /* 使其表现得像块级元素，但可以在行内显示 */
