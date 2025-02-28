@@ -84,11 +84,12 @@ body {
     right: 0;
     top: 0;
     height: 100%;
-    /* width: auto; */
+    width: auto;
     border: none;
     border-radius: 0 5px 5px 0;
     padding: 0px 0px;
     cursor: pointer;
+    box-sizing: border-box;
 }
 
 /* 网站-之前用的ul */
