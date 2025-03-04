@@ -69,3 +69,14 @@ document.querySelectorAll('.search-engine').forEach(function (se) {
         sm.style.display = "none";
     })
 })
+
+//切换回页面时聚焦到输入框
+const input = document.getElementById("searchInput");
+// 监听页面可见性变化
+document.addEventListener("visibilitychange", () => {
+    if (document.visibilityState === "visible") {
+        input.focus(); // 当页面重新可见时聚焦输入框
+    }
+});
+// 初始加载时也聚焦（可选），用autofocus实现了
+//input.focus();

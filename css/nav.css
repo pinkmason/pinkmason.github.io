@@ -66,6 +66,11 @@ body {
     /* 确保padding不会增加元素的总宽度 */
 }
 
+/* 聚焦时特殊显示
+.search-input:focus {
+    box-shadow: 0 0 8px rgba(235, 8, 8);
+} */
+
 .search-button {
     position: absolute;
     right: 0;
