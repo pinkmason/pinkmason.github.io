@@ -20,7 +20,7 @@
   </div>
   <!-- 搜索框 -->
   <div class="search-container">
-    <form onsubmit="event.preventDefadivt()"><!-- 阻止表单默认的提交行为,; searchBaidu();这里面也可以加 -->
+    <form onsubmit="event.preventDefault();"><!-- 阻止表单默认的提交行为,; searchBaidu();这里面也可以加 -->
       <input type="text" id="searchInput" class="search-input" autofocus placeholder="请输入搜索关键词"
         onkeypress="handleKeyPress(event)">
       <button style="display:none;" type="button" class="search-button" onclick="searchBaidu()">搜索</button>
