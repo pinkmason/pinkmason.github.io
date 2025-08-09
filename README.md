@@ -10,4 +10,5 @@ This project is licensed under the MIT License.
 - 添加icon（网络路径、仓库或Base64）
 - 搜索框提示词功能
 - 暗色模式
+- 站点列表更改为锚链接方案
 
