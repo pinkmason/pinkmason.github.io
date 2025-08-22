@@ -29,6 +29,7 @@ aliases:
 - [不散](https://zh.m.wikipedia.org/wiki/%E4%B8%8D%E6%95%A3)，导演蔡明亮，主演陈湘琪、李康生，2003
 - [去年在马里昂巴德](https://zh.m.wikipedia.org/wiki/%E5%8E%BB%E5%B9%B4%E5%9C%A8%E9%A6%AC%E5%80%AB%E5%B7%B4)，导演阿伦·雷乃，主演黛芬·赛赫意、吉奥吉欧·阿尔比基，1961
 - [堕落天使](https://zh.m.wikipedia.org/wiki/%E5%A2%AE%E8%90%BD%E5%A4%A9%E4%BD%BF_(1995%E5%B9%B4%E9%9B%BB%E5%BD%B1))，导演王家卫，主演黎明、李嘉欣、金城武、莫文蔚、杨采妮，1995
+- [红辣椒](https://zh.m.wikipedia.org/wiki/%E7%9B%9C%E5%A4%A2%E5%81%B5%E6%8E%A2_(%E9%9B%BB%E5%BD%B1))，导演今敏，2006
 ## 参考
 
 - [Derek Sivers|now page](https://sive.rs/now)

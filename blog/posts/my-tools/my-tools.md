@@ -1,11 +1,11 @@
 ---
-title: first test
+title: my tools
 date: 2025/08/17 08:30
 tags:
   - 测试
   - 分享
 aliases:
-  - /2025/08/17/first-test/
+  - /2025/08/17/my-tools/
 ---
 
 <!--more-->
@@ -20,7 +20,7 @@ aliases:
 
 ### :iphone: 手机及平板
 
-- **Xiaomi 8，6.67"，Snapdragon 845，6GB 64GB**，购于2018年，依然坚挺
+- **Xiaomi 8，6.21"，Snapdragon 845，6GB 64GB**，购于2018年，依然坚挺
 
 ### 壁纸
 ![壁纸](./background-image.jpg)
