@@ -1,11 +1,11 @@
 ---
-title: my tools
+title: tools
 date: 2025/08/17 08:30
 tags:
-  - 测试
+  - 工具
   - 分享
 aliases:
-  - /2025/08/17/my-tools/
+  - /2025/08/17/tools/
 ---
 
 <!--more-->
