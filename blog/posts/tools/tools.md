@@ -1,11 +1,11 @@
 ---
 title: tools
-date: 2025/08/17 08:30
+date: 2026/1/12 08:30
 tags:
   - 工具
   - 分享
 aliases:
-  - /2025/08/17/tools/
+  - /2026/1/12/tools/
 ---
 
 <!--more-->
@@ -20,10 +20,11 @@ aliases:
 
 ### :iphone: 手机及平板
 
-- **Xiaomi 8，6.21"，Snapdragon 845，6GB 64GB**，购于2018年，依然坚挺
+- **Xiaomi 8，6.21"，Snapdragon 845，6GB 64GB**，购于2018年
 
 ### 壁纸
-![壁纸](./background-image.jpg)
+![](./background-image.jpg)
+![](./Au%20Bord%20Du%20Fjord%20De%20Christiania-莫奈.jpg)
 
 ## 参考
 
