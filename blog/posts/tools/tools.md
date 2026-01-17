@@ -22,10 +22,6 @@ aliases:
 
 - **Xiaomi 8，6.21"，Snapdragon 845，6GB 64GB**，购于2018年
 
-### 壁纸
-![](./background-image.jpg)
-![](./Au%20Bord%20Du%20Fjord%20De%20Christiania-莫奈.jpg)
-
 ## 参考
 
 - [rwv|blog](https://github.com/rwv/blog/)
