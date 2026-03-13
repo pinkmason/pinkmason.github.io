@@ -1,3 +1,11 @@
+/* 基础重置：清除默认边距，统一盒模型 */
+* {
+    margin: 0;
+    padding: 0;
+    /* 核心：确保宽度包含内边距/边框，避免布局错乱 */
+    box-sizing: border-box;
+}
+
 body {
     /* background-image: url('media/bg.jpg');*/
     /* 设置壁纸，文字需要改颜色 */
@@ -9,17 +17,24 @@ body {
 
 /* 导航栏 */
 .navbar {
+    /* 粘性定位：核心属性 */
+    position: sticky;
+    /* 关键：滚动到顶部时固定,有多个时后面的top值需要计算 */
+    top: 0;
     display: flex;
     /* 使用flex布局来实现水平排列 */
     justify-content: flex-start;
     /* 项目之间的空间平均分布 */
+    flex-wrap: wrap;
+    /* 自动换行 */
     padding: 10px 0px;
     /* 上下内边距 */
-    /* background-color: #4668dd; /* 背景色 */
+    background-color: #ffffff;
+    /* 背景色用于挡住下面内容 */
 }
 
 .nav-item {
-    margin: 0px 0px;
+    margin: 0;
     /* 项目之间的外边距 */
 }
 
@@ -48,11 +63,16 @@ body {
     margin: 5% auto;
     /* 水平居中 */
     position: relative;
+    /* 没用sticky时使用，写html中会出问题 */
 }
 
 @media (max-width: 1000px) {
     .search-container {
         width: 90%;
+        margin: 5% auto;
+        /* 水平居中 */
+        position: relative;
+        /* 没用sticky时使用，写html中会出问题 */
         /* 对小屏幕设备进行调整，min对大屏幕进行调整 */
     }
 }
@@ -99,15 +119,27 @@ body {
 
 /* 网站-之前用的ul */
 .website.active {
+    scroll-margin-top: 100px;
+    /* 锚链接跳转位置设置，要兼容旧浏览器可用空锚点元素 */
     display: flex;
     /* 消除ul左侧空白 */
     /* padding-left: 0; */
     flex-flow: row wrap;
     justify-content: center;
+    margin-bottom: 0;
+    margin-top: 0;
 }
 
 .website {
-    display: none;
+    scroll-margin-top: 100px;
+    /* 锚链接跳转位置设置，要兼容旧浏览器可用空锚点元素 */
+    display: flex;
+    /* 消除ul左侧空白 */
+    /* padding-left: 0; */
+    flex-flow: row wrap;
+    justify-content: center;
+    margin-bottom: 0;
+    margin-top: 0;
 }
 
 .website a {

@@ -1,4 +1,4 @@
-//搜索脚本
+//搜索框搜索脚本
 function searchBaidu() {
     // 获取搜索框中的值
     var searchTerm = document.getElementById('searchInput').value;
@@ -15,15 +15,17 @@ function handleKeyPress(event) {
     }
 }
 
+
 //随机排列网站
-// 数组随机化
-/* function shuffleArray(array) {
+/* // 数组随机化函数
+function shuffleArray(array) {
     for (let i = array.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * (i + 1));
         [array[i], array[j]] = [array[j], array[i]];
     }
     return array;
 }
+//随机父元素下子元素
 function randomizeElements(activewebsite) {
     //const activewebsite = document.querySelector('.website.active');//获取div对象
     const websiteitems = Array.from(activewebsite.children);
@@ -35,10 +37,10 @@ function randomizeElements(activewebsite) {
     // 添加子项
     shuffledItems.forEach(item => activewebsite.appendChild(item));
 } */
-//randomizeElements(); 
 
-//导航栏脚本
-document.querySelectorAll(".nav-item.linksite").forEach(function (ni) {
+
+//导航栏点击切换脚本，需配合css中的.website的none类实现
+/* document.querySelectorAll(".nav-item.linksite").forEach(function (ni) {
     ni.addEventListener('click', function () {
         //console.log(this);
         var webs = document.querySelectorAll('.website');
@@ -48,17 +50,20 @@ document.querySelectorAll(".nav-item.linksite").forEach(function (ni) {
         });
         var nowsite = document.getElementById(this.getAttribute('data-linksite'));
         nowsite.classList.add('active'); // 添加active类，显示内容
-        //randomizeElements(nowsite); //随机网站
+        //randomizeElements(nowsite); //随机排列网站
     })
-})
+}) */
+
 
 //搜索引擎切换
+//点击图标显示搜索引擎图标
 document.getElementById('searchtype').addEventListener('click', function () {
     var sm = document.getElementById('searchmenu');
     sm.style.display = "flex";
     //长时间未选择自动关闭，可进一步优化为鼠标悬停在选择dom上时不关闭（有时候会想的比较久）
     setTimeout(function () { sm.style.display = "none" }, 4000)
 });
+//搜索引擎图标点击切换搜索引擎
 document.querySelectorAll('.search-engine').forEach(function (se) {
     se.addEventListener('click', function () {
         // console.log(this);
@@ -71,6 +76,7 @@ document.querySelectorAll('.search-engine').forEach(function (se) {
     })
 })
 
+
 //切换回页面时聚焦到输入框
 const input = document.getElementById("searchInput");
 // 监听页面可见性变化
@@ -79,5 +85,5 @@ document.addEventListener("visibilitychange", () => {
         input.focus(); // 当页面重新可见时聚焦输入框
     }
 });
-// 初始加载时也聚焦（可选），用autofocus实现了
+// 初始加载时也聚焦（可选），html中用autofocus实现了
 //input.focus();

@@ -12,25 +12,27 @@
 <body>
   <!-- 导航条 -->
   <div class="navbar">
-    <div class="nav-item" style="position:absolute;right: 8px;"><a href="../index.html" target="_blank">返回主页</a></div>
-    <div class="nav-item linksite" data-linksite="cysite"><a>常用</a></div>
-    <div class="nav-item linksite" data-linksite="gjsite"><a>工具</a></div>
-    <div class="nav-item linksite" data-linksite="gzsite"><a>工作</a></div>
-    <div class="nav-item linksite" data-linksite="shsite"><a>生活</a></div>
-    <div class="nav-item linksite" data-linksite="ylsite"><a>娱乐</a></div>
+    <div class="nav-item" style="position:absolute;right: 0px;"><a href="../index.html" target="_blank">返回主页</a></div>
+    <div class="nav-item linksite" data-linksite="cysite"><a href="#cysite">常用</a></div>
+    <div class="nav-item linksite" data-linksite="gjsite"><a href="#gjsite">工具</a></div>
+    <div class="nav-item linksite" data-linksite="gzsite"><a href="#gzsite">工作</a></div>
+    <div class="nav-item linksite" data-linksite="shsite"><a href="#shsite">生活</a></div>
+    <div class="nav-item linksite" data-linksite="ylsite"><a href="#ylsite">娱乐</a></div>
   </div>
   <!-- 搜索框 -->
-  <div class="search-container">
-    <form onsubmit="event.preventDefault();"><!-- 阻止表单默认的提交行为,; searchBaidu();这里面也可以加 -->
-      <input type="text" id="searchInput" class="search-input" autofocus placeholder="请输入搜索关键词"
-        onkeypress="handleKeyPress(event)">
-      <button style="display:none;" type="button" class="search-button" onclick="searchBaidu()">搜索</button>
-      <!-- 搜索引擎图标 -->
-      <div id="searchtype" style="display: flex; justify-content: center; align-items: center; ">
-        <img id="search-icon" src="../media/baidu.svg" data-link="https://www.baidu.com/s?wd=" width=70% height=70%
-          alt="搜索引擎图标" title="点击切换搜索引擎" aria-label="点击切换搜索引擎">
-      </div>
-    </form>
+  <div style="background-color: #ffffff;position: sticky;top: 54px;">
+    <div class="search-container">
+      <form onsubmit="event.preventDefault();"><!-- 阻止表单默认的提交行为,; searchBaidu();这里面也可以加 -->
+        <input type="text" id="searchInput" class="search-input" autofocus placeholder="请输入搜索关键词"
+          onkeypress="handleKeyPress(event)">
+        <button style="display:none;" type="button" class="search-button" onclick="searchBaidu()">搜索</button>
+        <!-- 搜索引擎图标 -->
+        <div id="searchtype" style="display: flex; justify-content: center; align-items: center; ">
+          <img id="search-icon" src="../media/baidu.svg" data-link="https://www.baidu.com/s?wd=" width=70% height=70%
+            alt="搜索引擎图标" title="点击切换搜索引擎" aria-label="点击切换搜索引擎">
+        </div>
+      </form>
+    </div>
   </div>
   <!-- 搜索引擎 -->
   <div id="searchmenu" style="display: none;justify-content: space-around;">
@@ -64,6 +66,7 @@
     <a href="https://zh.m.wikipedia.org/wiki/Wikipedia:%E9%A6%96%E9%A1%B5" target="_blank">维基百科</a>
     <!-- <a href="" target="_blank"></a> -->
   </div>
+
   <!-- 工具网站 -->
   <div id="gjsite" class="website">
     <a href="https://www.filetypeadvisor.com/zh-cn/" target="_blank">文件格式</a>
@@ -78,6 +81,7 @@
     <a href="https://www.toolhelper.cn/QRCode/Recognize" target="_blank">二维码和条形码</a>
     <!-- <a href="" target="_blank"></a> -->
   </div>
+
   <!-- 工作网站 -->
   <div id="gzsite" class="website">
     <a href="https://www.chsi.com.cn/" target="_blank">学信网</a>
@@ -96,6 +100,7 @@
     <a href="http://www.npc.gov.cn/npc/c2/c183/c199/" target="_blank">人大立法动态</a>
     <!-- <a href="" target="_blank"></a> -->
   </div>
+
   <!-- 生活网站 -->
   <div id="shsite" class="website">
     <a href="https://cook.aiursoft.com/" target="_blank">做饭指南</a>
@@ -108,6 +113,7 @@
     <a href="https://www.mem.gov.cn/kp/" target="_blank">应急部科普</a>
     <!-- <a href="" target="_blank"></a> -->
   </div>
+
   <!-- 娱乐网站 -->
   <div id="ylsite" class="website">
     <a href="https://tophub.today/" target="_blank">今日热榜</a>
@@ -122,6 +128,7 @@
     <a href="F:" target="_blank">F盘</a><!--可添加脚本实现输入路径-->
     <!-- <a href="" target="_blank"></a> -->
   </div>
+
   <script src="../js/nav.js"></script>
   <!--  <script>
     /* var jsonString = '{"name":"John Doe","age":30,"city":"New York"}';
