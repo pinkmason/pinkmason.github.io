@@ -158,11 +158,19 @@ body {
     word-wrap: break-word;
     /* 防止长单词不换行 */
     color: black;
+    margin: 5px 5px;
+    background: #f8f9fa;
+    border-radius: 10px;
+    box-shadow: 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 @media (max-width: 1000px) {
     .website a {
-        width: 48%;
+        width: 40%;
+        margin: 10px 10px;
+        background: #f8f9fa;
+        border-radius: 10px;
+        box-shadow: 4px 6px rgba(0, 0, 0, 0.1);
         /* 对小屏幕设备进行调整，min对大屏幕进行调整 */
     }
 }
