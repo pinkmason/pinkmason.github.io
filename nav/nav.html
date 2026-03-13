@@ -6,21 +6,25 @@
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="../css/nav.css">
+  <link rel="icon" href="../media/icon.svg">
   <title>pinkmason的导航</title>
 </head>
 
 <body>
   <!-- 导航条 -->
   <div class="navbar">
-    <div class="nav-item" style="position:absolute;right: 0px;"><a href="../index.html" target="_blank">返回主页</a></div>
+    <!-- <div class="nav-item" style="position:absolute;left: 20px;"></div>用于绝对位置布局 -->
     <div class="nav-item linksite" data-linksite="cysite"><a href="#cysite">常用</a></div>
     <div class="nav-item linksite" data-linksite="gjsite"><a href="#gjsite">工具</a></div>
     <div class="nav-item linksite" data-linksite="gzsite"><a href="#gzsite">工作</a></div>
     <div class="nav-item linksite" data-linksite="shsite"><a href="#shsite">生活</a></div>
     <div class="nav-item linksite" data-linksite="ylsite"><a href="#ylsite">娱乐</a></div>
+    <div class="nav-item"><a href="../index.html" target="_blank">主页</a></div>
+    <div class="nav-item"><a href="https://github.com/pinkmason" target="_blank"><img src="../media/GitHub.svg" alt="GitHub"></a></div>
+    <div id="darkModeBtn" class="nav-item"><img src="../media/sun.svg" alt="亮黑"></div>
   </div>
   <!-- 搜索框 -->
-  <div style="background-color: #ffffff;position: sticky;top: 54px;">
+  <div class="search">
     <div class="search-container">
       <form onsubmit="event.preventDefault();"><!-- 阻止表单默认的提交行为,; searchBaidu();这里面也可以加 -->
         <input type="text" id="searchInput" class="search-input" autofocus placeholder="请输入搜索关键词"
@@ -130,31 +134,4 @@
   </div>
 
   <script src="../js/nav.js"></script>
-  <!--  <script>
-    /* var jsonString = '{"name":"John Doe","age":30,"city":"New York"}';
-    var data1 = JSON.parse(jsonString);
-    console.log(data1.name); */
-    //可给导航条的项目添加点击事件获取data来实现通过json修改页面，不过不能本地运行
-    fetch('./json/nav.json')
-      .then(response => response.json()) // 将响应体解析为JSON
-      .then(data => {
-        console.log(data); // 打印整个对象
-        var xx = 'cysite';//可优化为通过点击获取
-        console.log(data[xx]); // 打印对象的属性
-        console.log(data[xx][0]);
-        console.log(data[xx][0].name);
-        var ls = '<a href="' + data[xx][0].link + '" target="_blank">' + data[xx][0].name + '</a>'
-        console.log(ls)
-
-        let result = '';
-        for (const site of data[xx]) {
-          result += '<a href="' + site.link + '" target="_blank">' + site.name + '</a>';
-          //通过获取id插入到指定位置实现修改页面 
-        }
-        console.log(result)
-      })
-      .catch((error) => {
-        console.error('Error:', error);
-      }); 
-  </script> <!-- 操作json数据实践 -->
 </body>

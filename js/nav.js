@@ -87,3 +87,64 @@ document.addEventListener("visibilitychange", () => {
 });
 // 初始加载时也聚焦（可选），html中用autofocus实现了
 //input.focus();
+
+
+//暗黑模式
+// 获取按钮和 html 根标签
+const btn = document.getElementById('darkModeBtn');
+const html = document.documentElement;
+const imgElement = btn.getElementsByTagName('img')[0];
+// 初始化：从本地存储读取主题
+function initTheme() {
+    const isDark = localStorage.getItem('darkMode') === 'true';
+    if (isDark) {
+        html.classList.add('dark');
+        imgElement.src = "../media/sun.svg";
+    }
+    else {
+        imgElement.src = "../media/moon.svg";
+    }
+}
+initTheme();
+// 切换暗黑/亮色
+btn.addEventListener('click', () => {
+    html.classList.toggle('dark');
+    const isDarkNow = html.classList.contains('dark');
+    // 保存到本地存储
+    localStorage.setItem('darkMode', isDarkNow);
+    if (isDarkNow) {
+        imgElement.src = "../media/sun.svg";
+    }
+    else {
+        imgElement.src = "../media/moon.svg";
+    }
+});
+
+
+
+//操作json数据实践
+/* var jsonString = '{"name":"John Doe","age":30,"city":"New York"}';
+    var data1 = JSON.parse(jsonString);
+    console.log(data1.name); */
+//可给导航条的项目添加点击事件获取data来实现通过json修改页面，不过不能本地运行
+/* fetch('./json/nav.json')
+    .then(response => response.json()) // 将响应体解析为JSON
+    .then(data => {
+        console.log(data); // 打印整个对象
+        var xx = 'cysite';//可优化为通过点击获取
+        console.log(data[xx]); // 打印对象的属性
+        console.log(data[xx][0]);
+        console.log(data[xx][0].name);
+        var ls = '<a href="' + data[xx][0].link + '" target="_blank">' + data[xx][0].name + '</a>'
+        console.log(ls)
+
+        let result = '';
+        for (const site of data[xx]) {
+            result += '<a href="' + site.link + '" target="_blank">' + site.name + '</a>';
+            //通过获取id插入到指定位置实现修改页面 
+        }
+        console.log(result)
+    })
+    .catch((error) => {
+        console.error('Error:', error);
+    });  */
