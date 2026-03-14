@@ -61,7 +61,7 @@ body {
     /* 垂直居中（核心） */
     justify-content: center;
     /* 水平居中（可选，按需添加） */
-    margin: 10px;
+    margin: 0px;
     /* 项目之间的外边距 */
 }
 
