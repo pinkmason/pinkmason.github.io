@@ -24,6 +24,7 @@ html.dark {
 
 a {
     color: var(--text-color);
+    text-decoration: none;
 }
 
 body {
@@ -52,6 +53,25 @@ body {
     /* 上下内边距 */
     background-color: var(--bg-color);
     /* 背景色用于挡住下面内容 */
+}
+
+@media (max-width: 1000px) {
+    .navbar {
+        /* 粘性定位：核心属性 */
+        position: sticky;
+        /* 关键：滚动到顶部时固定,有多个时后面的top值需要计算 */
+        top: 0;
+        display: flex;
+        /* 使用flex布局来实现水平排列 */
+        justify-content: space-around;
+        /* 项目分散对齐 */
+        flex-wrap: wrap;
+        /* 自动换行 */
+        padding: 10px 0px;
+        /* 上下内边距 */
+        background-color: var(--bg-color);
+        /* 背景色用于挡住下面内容 */
+    }
 }
 
 .nav-item {
