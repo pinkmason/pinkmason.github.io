@@ -120,9 +120,20 @@ body {
     /* 鼠标悬停时的背景色 */
 }
 
+.nav-item.linksite {
+    display: none;
+}
+
+@media (max-width: 1000px) {
+    .nav-item.linksite {
+        display: flex;
+    }
+}
+
 /* 搜索框 */
 .search {
     background-color: var(--bg-color);
+    /* 用于固定在前面 */
     position: sticky;
     top: 54px;
 }
@@ -198,7 +209,7 @@ body {
     /* padding-left: 0; */
     flex-flow: row wrap;
     justify-content: center;
-    margin-bottom: 0;
+    margin-bottom: 20px;
     margin-top: 0;
 }
 
@@ -210,15 +221,17 @@ body {
     /* padding-left: 0; */
     flex-flow: row wrap;
     justify-content: center;
-    margin-bottom: 0;
+    margin-bottom: 20px;
     margin-top: 0;
 }
 
 .website a {
     text-decoration: none;
     /* 移除下划线 */
-    width: 22%;
-    height: 60px;
+    /* width: 22%; */
+    /* 想要规整可使用 */
+    height: 30px;
+    /* 想要在小屏幕换行显示合理需要设为60px */
     align-content: center;
     /* 2024新增特性 */
     text-align: center;
@@ -231,20 +244,33 @@ body {
     /* 防止长单词不换行 */
     /* color: var(--text-color); */
     /* 颜色和阴影 */
-    margin: 5px 5px;
+    margin: 3px 3px;
+    padding: 0 3px;
     background: var(--text-bg);
     border-radius: 10px;
     box-shadow: 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.website p {
+    align-content: center;
+    /* 2024新增特性 */
+    text-align: center;
+    color:#3366FF;
 }
 
 @media (max-width: 1000px) {
     .website a {
         width: 40%;
         margin: 10px 10px;
+        height: 60px;
         background: var(--text-bg);
         border-radius: 10px;
         box-shadow: 4px 6px rgba(0, 0, 0, 0.1);
         /* 对小屏幕设备进行调整，min对大屏幕进行调整 */
+    }
+
+    .website p {
+        display: none;
     }
 }
 

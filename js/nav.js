@@ -39,7 +39,7 @@ function randomizeElements(activewebsite) {
 } */
 
 
-//导航栏点击切换脚本，需配合css中的.website的none类实现
+//导航栏点击切换脚本，需css中的.website类display：none属性和.website.active类配合实现
 /* document.querySelectorAll(".nav-item.linksite").forEach(function (ni) {
     ni.addEventListener('click', function () {
         //console.log(this);
