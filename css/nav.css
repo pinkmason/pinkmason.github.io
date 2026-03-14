@@ -3,7 +3,7 @@
     --bg-color: #ffffff;
     --text-color: #757575;
     --text-bg: #f8f9fa;
-    --ahover-color:#8188d8;
+    --ahover-color: #8188d8;
 }
 
 /* 2. 定义暗黑主题变量 */
@@ -23,7 +23,7 @@ html.dark {
 }
 
 a {
-    color:var(--text-color);
+    color: var(--text-color);
 }
 
 body {
@@ -48,7 +48,7 @@ body {
     /* 项目右对齐 */
     flex-wrap: wrap;
     /* 自动换行 */
-    padding: 10px 20px;
+    padding: 10px 0px;
     /* 上下内边距 */
     background-color: var(--bg-color);
     /* 背景色用于挡住下面内容 */
@@ -61,8 +61,21 @@ body {
     /* 垂直居中（核心） */
     justify-content: center;
     /* 水平居中（可选，按需添加） */
-    margin: 0px;
+    margin: 0px 20px;
     /* 项目之间的外边距 */
+}
+
+@media (max-width: 1000px) {
+    .nav-item {
+        /* 实现div中img居中 */
+        display: flex;
+        align-items: center;
+        /* 垂直居中（核心） */
+        justify-content: center;
+        /* 水平居中（可选，按需添加） */
+        margin: 0px;
+        /* 项目之间的外边距 */
+    }
 }
 
 .nav-item a {
