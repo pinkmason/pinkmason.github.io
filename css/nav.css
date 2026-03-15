@@ -66,7 +66,7 @@ body {
         top: 0;
         display: flex;
         /* 使用flex布局来实现水平排列 */
-        justify-content:flex-end;
+        justify-content: flex-end;
         /* 当导航项目多时用分散对齐space-around */
         flex-wrap: wrap;
         /* 自动换行 */
@@ -142,9 +142,17 @@ body {
     top: 54px;
 }
 
+/* 小屏幕隐藏搜索框 */
+@media (max-width: 1000px) {
+    .search {
+        display: none;
+    }
+
+}
+
 .search-container {
     width: 60%;
-    margin: 5% auto;
+    margin: 10vh auto;
     /* 水平居中 */
     position: relative;
     /* 没用sticky时使用，写html中会出问题 */
@@ -153,7 +161,7 @@ body {
 @media (max-width: 1000px) {
     .search-container {
         width: 90%;
-        margin: 5% auto;
+        margin: 10vh auto;
         /* 水平居中 */
         position: relative;
         /* 没用sticky时使用，写html中会出问题 */
@@ -182,7 +190,7 @@ body {
     height: 100%;
     border: none;
     background-color: #4e6ef2;
-    border-radius: 0 5px 5px 0;
+    /* border-radius: 0 5px 5px 0; */
     padding: 0 15px;
     cursor: pointer;
 }
@@ -196,9 +204,10 @@ body {
     right: 0;
     top: 0;
     height: 100%;
-    width: auto;
+    width: 37px;
+    /* 用auto更好，宽度和高度一样设置需研究 */
     border: none;
-    border-radius: 0 5px 5px 0;
+    /* border-radius: 0 5px 5px 0; */
     padding: 0px 0px;
     cursor: pointer;
     box-sizing: border-box;
@@ -213,7 +222,7 @@ body {
     /* padding-left: 0; */
     flex-flow: row wrap;
     justify-content: center;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     margin-top: 0;
 }
 
@@ -246,17 +255,17 @@ body {
     align-content: center;
     /* 2024新增特性 */
     text-align: center;
-    color:#4A7AFF;
+    color: #4A7AFF;
 }
 
 @media (max-width: 1000px) {
     .website a {
         width: 23%;
-        margin: 3px 3px;
+        margin: 5px 3px;
         padding: 0px 0px;
-        height: 30px;
+        height: 25px;
         /* 想要在小屏幕换行显示合理需要设为60px */
-        font-size:1rem;
+        font-size: 0.9rem;
         background: var(--text-bg);
         border-radius: 5px;
         box-shadow: 3px 5px rgba(0, 0, 0, 0.1);
