@@ -1,15 +1,17 @@
 /* 1. 定义亮色主题变量 */
 :root {
-    --bg-color: #ffffff;
-    --text-color: #757575;
-    --text-bg: #f8f9fa;
-    --ahover-color: #8188d8;
+    --bg-color: #F8F9FA;
+    --text-color: #666666;
+    --text-bg: #EAEBFA;
+    --ahover-color: #4A7AFF;
 }
 
 /* 2. 定义暗黑主题变量 */
 html.dark {
-    --bg-color: #1a1a1a;
-    --text-bg: #333333;
+    --bg-color: #18191A;
+    --text-bg: #A0A0A0;
+    --text-bg: #2A2C3E;
+    --ahover-color: #6BA1FF;
 }
 
 /* 基础重置：清除默认边距，统一盒模型 */
@@ -201,18 +203,6 @@ body {
 }
 
 /* 网站-之前用的ul */
-.website.active {
-    scroll-margin-top: 100px;
-    /* 锚链接跳转位置设置，要兼容旧浏览器可用空锚点元素 */
-    display: flex;
-    /* 消除ul左侧空白 */
-    /* padding-left: 0; */
-    flex-flow: row wrap;
-    justify-content: center;
-    margin-bottom: 20px;
-    margin-top: 0;
-}
-
 .website {
     scroll-margin-top: 100px;
     /* 锚链接跳转位置设置，要兼容旧浏览器可用空锚点元素 */
@@ -231,7 +221,6 @@ body {
     /* width: 22%; */
     /* 想要规整可使用 */
     height: 30px;
-    /* 想要在小屏幕换行显示合理需要设为60px */
     align-content: center;
     /* 2024新增特性 */
     text-align: center;
@@ -245,7 +234,6 @@ body {
     /* color: var(--text-color); */
     /* 颜色和阴影 */
     margin: 3px 3px;
-    padding: 0 3px;
     background: var(--text-bg);
     border-radius: 10px;
     box-shadow: 4px 6px rgba(0, 0, 0, 0.1);
@@ -255,14 +243,16 @@ body {
     align-content: center;
     /* 2024新增特性 */
     text-align: center;
-    color:#3366FF;
+    color:#4A7AFF;
 }
 
 @media (max-width: 1000px) {
     .website a {
-        width: 40%;
-        margin: 10px 10px;
-        height: 60px;
+        width: 23%;
+        margin: 3px 3px;
+        height: 22px;
+        /* 想要在小屏幕换行显示合理需要设为60px */
+        font-size:0.8rem;
         background: var(--text-bg);
         border-radius: 10px;
         box-shadow: 4px 6px rgba(0, 0, 0, 0.1);
