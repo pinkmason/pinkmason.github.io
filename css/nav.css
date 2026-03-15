@@ -1,3 +1,4 @@
+/* 小米8调试宽度为392px */
 /* 1. 定义亮色主题变量 */
 :root {
     --bg-color: #F8F9FA;
@@ -65,8 +66,8 @@ body {
         top: 0;
         display: flex;
         /* 使用flex布局来实现水平排列 */
-        justify-content: space-around;
-        /* 项目分散对齐 */
+        justify-content:flex-end;
+        /* 当导航项目多时用分散对齐space-around */
         flex-wrap: wrap;
         /* 自动换行 */
         padding: 10px 0px;
@@ -95,8 +96,19 @@ body {
         /* 垂直居中（核心） */
         justify-content: center;
         /* 水平居中（可选，按需添加） */
-        margin: 0px;
-        /* 项目之间的外边距 */
+        margin: 0px 15px;
+        /* 项目之间的外边距，项目多时需要都设为0 */
+    }
+}
+
+.nav-item.linksite {
+    display: none;
+}
+
+@media (max-width: 1000px) {
+    .nav-item.linksite {
+        display: none;
+        /* 当手机网站需要翻页时设为flex */
     }
 }
 
@@ -120,16 +132,6 @@ body {
 .nav-item a:hover {
     background-color: var(--ahover-color);
     /* 鼠标悬停时的背景色 */
-}
-
-.nav-item.linksite {
-    display: none;
-}
-
-@media (max-width: 1000px) {
-    .nav-item.linksite {
-        display: flex;
-    }
 }
 
 /* 搜索框 */
@@ -234,6 +236,7 @@ body {
     /* color: var(--text-color); */
     /* 颜色和阴影 */
     margin: 3px 3px;
+    padding: 0px 3px;
     background: var(--text-bg);
     border-radius: 10px;
     box-shadow: 4px 6px rgba(0, 0, 0, 0.1);
