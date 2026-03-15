@@ -254,7 +254,7 @@ body {
         width: 23%;
         margin: 3px 3px;
         padding: 0px 0px;
-        height: 25px;
+        height: 30px;
         /* 想要在小屏幕换行显示合理需要设为60px */
         font-size:1rem;
         background: var(--text-bg);
