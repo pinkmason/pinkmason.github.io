@@ -252,14 +252,14 @@ body {
 @media (max-width: 1000px) {
     .website a {
         width: 23%;
-        margin: 3px 3px;
+        margin: 2px 2px;
         padding: 0px 0px;
         height: 22px;
         /* 想要在小屏幕换行显示合理需要设为60px */
         font-size:0.8rem;
         background: var(--text-bg);
-        border-radius: 10px;
-        box-shadow: 4px 6px rgba(0, 0, 0, 0.1);
+        border-radius: 5px;
+        box-shadow: 2px 3px rgba(0, 0, 0, 0.1);
         /* 对小屏幕设备进行调整，min对大屏幕进行调整 */
     }
 
