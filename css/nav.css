@@ -21,6 +21,7 @@ html.dark {
     padding: 0;
     /* 核心：确保宽度包含内边距/边框，避免布局错乱 */
     box-sizing: border-box;
+    /* 确保padding不会增加元素的总宽度 */
     transition: all 0.3s ease;
     /* 切换更丝滑 */
 }
@@ -81,9 +82,7 @@ body {
     /* 实现div中img居中 */
     display: flex;
     align-items: center;
-    /* 垂直居中（核心） */
     justify-content: center;
-    /* 水平居中（可选，按需添加） */
     margin: 0px 20px;
     /* 项目之间的外边距 */
 }
@@ -93,9 +92,7 @@ body {
         /* 实现div中img居中 */
         display: flex;
         align-items: center;
-        /* 垂直居中（核心） */
         justify-content: center;
-        /* 水平居中（可选，按需添加） */
         margin: 0px 15px;
         /* 项目之间的外边距，项目多时需要都设为0 */
     }
@@ -108,25 +105,19 @@ body {
 @media (max-width: 1000px) {
     .nav-item.linksite {
         display: none;
-        /* 当手机网站需要翻页时设为flex */
+        /* 当手机站点多的需要翻页时设为flex */
     }
 }
 
 .nav-item a {
-    text-decoration: none;
-    /* 移除下划线 */
-    /* color: inherit; /* 继承父元素的文字颜色 */
     padding: 5px 5px;
     /* 内边距，使链接区域更大，更容易点击 */
     display: inline-block;
     /* 使其表现得像块级元素，但可以在行内显示 */
-    transition: all 0.3s ease;
-    /* 添加过渡效果 */
-    /* color: var(--text-color); */
-    /* 实现a中img居中 */
     display: flex;
     align-items: center;
     justify-content: center;
+    /* 实现a中img居中 */
 }
 
 .nav-item a:hover {
@@ -174,8 +165,6 @@ body {
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
-    box-sizing: border-box;
-    /* 确保padding不会增加元素的总宽度 */
 }
 
 /* 聚焦时特殊显示
@@ -210,45 +199,74 @@ body {
     /* border-radius: 0 5px 5px 0; */
     padding: 0px 0px;
     cursor: pointer;
-    box-sizing: border-box;
+}
+
+.website-container {
+    display: flex;
+    flex-wrap: wrap;
+    /* 不用换行就是并排显示 */
+    align-content: center;
+    justify-content: center;
+}
+
+@media (max-width: 1000px) {
+    .website-container {
+        display: block;
+    }
 }
 
 /* 网站-之前用的ul */
 .website {
+    width: 100%;
     scroll-margin-top: 100px;
     /* 锚链接跳转位置设置，要兼容旧浏览器可用空锚点元素 */
     display: flex;
     /* 消除ul左侧空白 */
     /* padding-left: 0; */
     flex-flow: row wrap;
+    align-content: center;
     justify-content: center;
+    /* flex-direction:column; */
+    /* 列对齐模式，不常用会变成只有一列 */
     margin-bottom: 10px;
     margin-top: 0;
 }
 
 .website a {
-    text-decoration: none;
-    /* 移除下划线 */
     /* width: 22%; */
-    /* 想要规整可使用 */
-    height: 30px;
-    align-content: center;
-    /* 2024新增特性 */
+    /* 想要规整排列可使用，需要配合去除p元素 */
+    /* height: 30px; */
+    line-height: 30px;
+    /* align-content: center; */
+    /* 当行高不是固定值时使用 */
     text-align: center;
-    /* line-height: 30px; */
     display: inline-block;
     /* 使其表现得像块级元素，但可以在行内显示 */
-    transition: all 0.3s ease;
-    /* 添加过渡效果 */
     word-wrap: break-word;
     /* 防止长单词不换行 */
-    /* color: var(--text-color); */
-    /* 颜色和阴影 */
     margin: 3px 3px;
     padding: 0px 3px;
     background: var(--text-bg);
     border-radius: 10px;
     box-shadow: 4px 6px rgba(0, 0, 0, 0.1);
+    /* 背景颜色和阴影 */
+}
+
+@media (max-width: 1000px) {
+    .website a {
+        width: 23%;
+        margin: 5px 3px;
+        padding: 0px 0px;
+        /* height: 25px; */
+        line-height: 25px;
+        /* align-content: center; */
+        /* 当行高不是固定值时使用 */
+        font-size: 0.9rem;
+        background: var(--text-bg);
+        border-radius: 5px;
+        box-shadow: 3px 5px rgba(0, 0, 0, 0.1);
+        /* 对小屏幕设备进行调整，min对大屏幕进行调整 */
+    }
 }
 
 .website p {
@@ -259,19 +277,6 @@ body {
 }
 
 @media (max-width: 1000px) {
-    .website a {
-        width: 23%;
-        margin: 5px 3px;
-        padding: 0px 0px;
-        height: 25px;
-        /* 想要在小屏幕换行显示合理需要设为60px */
-        font-size: 0.9rem;
-        background: var(--text-bg);
-        border-radius: 5px;
-        box-shadow: 3px 5px rgba(0, 0, 0, 0.1);
-        /* 对小屏幕设备进行调整，min对大屏幕进行调整 */
-    }
-
     .website p {
         display: none;
     }
