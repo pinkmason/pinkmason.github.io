@@ -112,6 +112,9 @@ body {
 }
 
 .nav-item a {
+    width: 42px;
+    height: 34px;
+    border-radius: 10px 10px;
     padding: 5px 5px;
     /* 内边距，使链接区域更大，更容易点击 */
     display: inline-block;
@@ -121,6 +124,7 @@ body {
     justify-content: center;
     /* 实现a中img居中 */
     cursor: pointer;
+    background-color: var(--text-bg);
 }
 
 .nav-item a:hover {
