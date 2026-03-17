@@ -1,7 +1,9 @@
+/* 小米8调试宽度为392px */
 /* 1. 定义亮色主题变量 */
 :root {
     --bg-color: #F8F9FA;
     --text-color: #666666;
+    --text-color2: #4A7AFF;
     --text-bg: #EAEBFA;
     --ahover-color: #4A7AFF;
 }
@@ -9,9 +11,10 @@
 /* 2. 定义暗黑主题变量 */
 html.dark {
     --bg-color: #18191A;
-    --text-bg: #A0A0A0;
+    --text-color: #A0A0A0;
+    --text-color2: #4A7AFF;
     --text-bg: #2A2C3E;
-    --ahover-color: #6BA1FF;
+    --ahover-color: #1E1E1E;
 }
 
 /* 基础重置：清除默认边距，统一盒模型 */
@@ -20,6 +23,7 @@ html.dark {
     padding: 0;
     /* 核心：确保宽度包含内边距/边框，避免布局错乱 */
     box-sizing: border-box;
+    /* 确保padding不会增加元素的总宽度 */
     transition: all 0.3s ease;
     /* 切换更丝滑 */
 }
@@ -65,7 +69,7 @@ body {
         top: 0;
         display: flex;
         /* 使用flex布局来实现水平排列 */
-        justify-content:flex-end;
+        justify-content: flex-end;
         /* 当导航项目多时用分散对齐space-around */
         flex-wrap: wrap;
         /* 自动换行 */
@@ -80,9 +84,7 @@ body {
     /* 实现div中img居中 */
     display: flex;
     align-items: center;
-    /* 垂直居中（核心） */
     justify-content: center;
-    /* 水平居中（可选，按需添加） */
     margin: 0px 20px;
     /* 项目之间的外边距 */
 }
@@ -92,29 +94,33 @@ body {
         /* 实现div中img居中 */
         display: flex;
         align-items: center;
-        /* 垂直居中（核心） */
         justify-content: center;
-        /* 水平居中（可选，按需添加） */
         margin: 0px 15px;
         /* 项目之间的外边距，项目多时需要都设为0 */
     }
 }
 
+.nav-item.linksite {
+    display: none;
+}
+
+@media (max-width: 1000px) {
+    .nav-item.linksite {
+        display: none;
+        /* 当手机站点多的需要翻页时设为flex */
+    }
+}
+
 .nav-item a {
-    text-decoration: none;
-    /* 移除下划线 */
-    /* color: inherit; /* 继承父元素的文字颜色 */
     padding: 5px 5px;
     /* 内边距，使链接区域更大，更容易点击 */
     display: inline-block;
     /* 使其表现得像块级元素，但可以在行内显示 */
-    transition: all 0.3s ease;
-    /* 添加过渡效果 */
-    /* color: var(--text-color); */
-    /* 实现a中img居中 */
     display: flex;
     align-items: center;
     justify-content: center;
+    /* 实现a中img居中 */
+    cursor: pointer;
 }
 
 .nav-item a:hover {

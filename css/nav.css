@@ -3,6 +3,7 @@
 :root {
     --bg-color: #F8F9FA;
     --text-color: #666666;
+    --text-color2: #4A7AFF;
     --text-bg: #EAEBFA;
     --ahover-color: #4A7AFF;
 }
@@ -10,9 +11,10 @@
 /* 2. 定义暗黑主题变量 */
 html.dark {
     --bg-color: #18191A;
-    --text-bg: #A0A0A0;
+    --text-color: #A0A0A0;
+    --text-color2: #4A7AFF;
     --text-bg: #2A2C3E;
-    --ahover-color: #6BA1FF;
+    --ahover-color: #1E1E1E;
 }
 
 /* 基础重置：清除默认边距，统一盒模型 */
@@ -118,6 +120,7 @@ body {
     align-items: center;
     justify-content: center;
     /* 实现a中img居中 */
+    cursor: pointer;
 }
 
 .nav-item a:hover {
@@ -178,7 +181,7 @@ body {
     top: 0;
     height: 100%;
     border: none;
-    background-color: #4e6ef2;
+    background-color:var(--text-color2);
     /* border-radius: 0 5px 5px 0; */
     padding: 0 15px;
     cursor: pointer;
@@ -201,10 +204,15 @@ body {
     cursor: pointer;
 }
 
+.search-engine{
+    color: var(--text-color2);
+}
+
 .website-container {
     display: flex;
     flex-wrap: wrap;
     /* 不用换行就是并排显示 */
+    align-items: center;
     align-content: center;
     justify-content: center;
 }
@@ -224,6 +232,7 @@ body {
     /* 消除ul左侧空白 */
     /* padding-left: 0; */
     flex-flow: row wrap;
+    align-items: center;
     align-content: center;
     justify-content: center;
     /* flex-direction:column; */
@@ -270,10 +279,10 @@ body {
 }
 
 .website p {
-    align-content: center;
-    /* 2024新增特性 */
+    /* align-content: center; */
+    /* 用父容器align-items控制了 */
     text-align: center;
-    color: #4A7AFF;
+    color: var(--text-color2);
 }
 
 @media (max-width: 1000px) {
@@ -281,11 +290,6 @@ body {
         display: none;
     }
 }
-
-/* 另一种方法 */
-/* width: 30vw; 
-max-width: 300px; 
-min-width: 150px;  */
 
 .website a:hover {
     background-color: var(--ahover-color);
