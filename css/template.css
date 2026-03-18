@@ -85,7 +85,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 0px 20px;
+    margin: 0px 5px;
     /* 项目之间的外边距 */
 }
 
@@ -95,7 +95,7 @@ body {
         display: flex;
         align-items: center;
         justify-content: center;
-        margin: 0px 15px;
+        margin: 0px 5px;
         /* 项目之间的外边距，项目多时需要都设为0 */
     }
 }
