@@ -2,10 +2,15 @@
 /* 1. 定义亮色主题变量 */
 :root {
     --bg-color: #F8F9FA;
+    /* 背景颜色 */
     --text-color: #666666;
+    /* 文本颜色 */
     --text-color2: #4A7AFF;
+    /* 显眼文本颜色 */
     --text-bg: #EAEBFA;
+    /* 文字背景 */
     --ahover-color: #4A7AFF;
+    /* 悬停颜色 */
 }
 
 /* 2. 定义暗黑主题变量 */
@@ -28,16 +33,12 @@ html.dark {
     /* 切换更丝滑 */
 }
 
-a {
-    color: var(--text-color);
-    text-decoration: none;
-}
-
 body {
     /* background-image: url('media/bg.jpg');*/
     /* 设置壁纸，文字需要改颜色 */
+    color:var(--text-color);
+    /* 影响文本等颜色 */
     background-color: var(--bg-color);
-    color: var(--text-color);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -45,7 +46,7 @@ body {
 
 /* 导航栏 */
 .navbar {
-    /* 粘性定位：核心属性 */
+    /* 粘性定位 */
     position: sticky;
     /* 关键：滚动到顶部时固定,有多个时后面的top值需要计算 */
     top: 0;
@@ -58,12 +59,12 @@ body {
     padding: 10px 0px;
     /* 上下内边距 */
     background-color: var(--bg-color);
-    /* 背景色用于挡住下面内容 */
+    /* 添加背景色用于挡住滚动时下面内容 */
 }
 
 @media (max-width: 1000px) {
     .navbar {
-        /* 粘性定位：核心属性 */
+        /* 粘性定位 */
         position: sticky;
         /* 关键：滚动到顶部时固定,有多个时后面的top值需要计算 */
         top: 0;
@@ -76,7 +77,7 @@ body {
         padding: 10px 0px;
         /* 上下内边距 */
         background-color: var(--bg-color);
-        /* 背景色用于挡住下面内容 */
+        /* 添加背景色用于挡住滚动时下面内容 */
     }
 }
 
@@ -124,10 +125,22 @@ body {
     justify-content: center;
     /* 实现a中img居中 */
     cursor: pointer;
+    color: var(--text-color);
+    text-decoration: none;
     background-color: var(--text-bg);
 }
 
 .nav-item a:hover {
     background-color: var(--ahover-color);
     /* 鼠标悬停时的背景色 */
+}
+
+/* 上面为通用模板 */
+
+p {
+    margin: 16px auto;
+}
+
+a {
+    color: var(--text-color2);
 }
