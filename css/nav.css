@@ -241,7 +241,7 @@ a {
 .website {
     width: 100%;
     scroll-margin-top: 100px;
-    /* 锚链接跳转位置设置，要兼容旧浏览器可用空锚点元素 */
+    /* 锚链接跳转避遮挡，高度适当大于遮挡内容高度，要兼容旧浏览器可用空锚点元素 */
     display: flex;
     /* 消除ul左侧空白 */
     /* padding-left: 0; */
