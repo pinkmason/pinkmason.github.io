@@ -203,6 +203,8 @@ a {
 
 #searchInput {
     background-color: var(--bg-color);
+    color:var(--text-color2);
+    /* 输入框文字颜色可调整 */
 }
 
 #searchtype {
