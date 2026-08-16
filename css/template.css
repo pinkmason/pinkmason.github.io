@@ -1,3 +1,4 @@
+/* 普通页面直接使用此模板就行，要是小改可直接html中添加style内联，大改添加css文件 */
 /* 小米8调试宽度为392px */
 /* 1. 定义亮色主题变量 */
 :root {
@@ -133,14 +134,4 @@ body {
 .nav-item a:hover {
     background-color: var(--ahover-color);
     /* 鼠标悬停时的背景色 */
-}
-
-/* 上面为通用模板 */
-
-p {
-    margin: 1lh auto;
-}
-
-a {
-    color: var(--text-color2);
 }
